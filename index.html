@@ -2,648 +2,1870 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="Peluditos 3D - Accesorios ecológicos para celular que apoyan a la Fundación Animalista Girardot.">
-    <title>Peluditos 3D | Accesorios con Corazón</title>
-    
-    <!-- FUENTES -->
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- ICONOS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Peluditos 3D crea accesorios 3D para celular inspirados en mascotas. Diseños colombianos en PLA, con empaque de regalo y apoyo a la Fundación Animalista Girardot.">
+    <meta name="theme-color" content="#1f7a68">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' 'unsafe-inline'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+    <meta property="og:title" content="Peluditos 3D | Accesorios para celular con causa">
+    <meta property="og:description" content="Lleva a tu mascota en el celular con accesorios 3D hechos en Colombia y apoya a peluditos de la Fundación Animalista Girardot.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_CO">
+    <meta property="og:site_name" content="Peluditos 3D">
+    <meta property="og:image" content="https://peluditos3d.shop/hero.jpg">
+    <meta property="og:image:alt" content="Accesorio Peluditos 3D instalado en un celular">
+    <meta property="og:url" content="https://peluditos3d.shop/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Peluditos 3D | Accesorios para celular con causa">
+    <meta name="twitter:description" content="Accesorios 3D inspirados en mascotas, hechos en Colombia y con propósito social.">
+    <meta name="twitter:image" content="https://peluditos3d.shop/hero.jpg">
+    <title>Peluditos 3D | Accesorios para celular con causa</title>
 
-    <!-- ANIMACIONES -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="canonical" href="https://peluditos3d.shop/">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+    <link rel="preload" href="hero.jpg" as="image" fetchpriority="high">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://peluditos3d.shop/#organization",
+                "name": "Peluditos 3D",
+                "url": "https://peluditos3d.shop/",
+                "logo": "https://peluditos3d.shop/brand-symbol.png",
+                "sameAs": ["https://www.instagram.com/peluditos3d/"]
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://peluditos3d.shop/#website",
+                "url": "https://peluditos3d.shop/",
+                "name": "Peluditos 3D",
+                "inLanguage": "es-CO",
+                "publisher": { "@id": "https://peluditos3d.shop/#organization" }
+            }
+        ]
+    }
+    </script>
 
     <style>
         :root {
-            /* COLORES */
-            --green-main: #81C784;
-            --green-dark: #66BB6A;
-            --green-bg: #F1F8E9;
-            
-            --blue-main: #4FC3F7;
-            --blue-dark: #29B6F6;
-            --blue-bg: #E1F5FE;
-            
-            --white: #ffffff;
-            --text-main: #455A64;
-            --text-light: #78909C;
-            
-            --shadow-soft: 0 10px 30px rgba(0,0,0,0.05);
-            --shadow-card: 0 15px 35px rgba(0,0,0,0.08);
-            --radius: 25px;
+            --ink: #263238;
+            --muted: #50656d;
+            --line: #dfe7e5;
+            --paper: #ffffff;
+            --mist: #f5fbf8;
+            --mint: #1f7a68;
+            --mint-2: #34a982;
+            --sky: #176f93;
+            --sun: #f5b642;
+            --coral: #e86d55;
+            --footer: #20333a;
+            --shadow: 0 16px 36px rgba(31, 61, 70, 0.12);
+            --radius: 8px;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; overflow-x: hidden; }
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 86px;
+        }
 
         body {
-            font-family: 'Quicksand', sans-serif;
-            color: var(--text-main);
-            background: #fff;
+            margin: 0;
+            font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+            color: var(--ink);
+            background: var(--paper);
             line-height: 1.6;
         }
 
-        h1, h2, h3, h4 {
-            font-family: 'Fredoka', sans-serif;
-            color: var(--text-main);
-            line-height: 1.2;
+        body.nav-open {
+            overflow: hidden;
         }
 
-        p { margin-bottom: 15px; font-size: 1.05rem; }
-        .container { max-width: 1150px; margin: 0 auto; padding: 0 20px; }
-        .text-center { text-align: center; }
-        img { max-width: 100%; display: block; }
+        .skip-link {
+            position: fixed;
+            top: 8px;
+            left: 8px;
+            z-index: 2000;
+            padding: 10px 14px;
+            color: var(--paper);
+            background: var(--ink);
+            border-radius: var(--radius);
+            transform: translateY(-150%);
+        }
 
-        /* --- BOTONES GENERALES --- */
+        .skip-link:focus {
+            transform: translateY(0);
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        .fa-solid,
+        .fa-brands {
+            display: inline-block;
+            width: 1em;
+            font-style: normal;
+            line-height: 1;
+            text-align: center;
+        }
+
+        .fa-whatsapp::before { content: "☎"; }
+        .fa-instagram::before { content: "◎"; }
+        .fa-bars::before { content: "☰"; }
+        .fa-xmark::before { content: "×"; }
+        .fa-plus::before { content: "+"; }
+        .fa-minus::before { content: "−"; }
+        .fa-trash::before { content: "×"; }
+        .fa-check::before { content: "✓"; }
+        .fa-star::before { content: "★"; }
+        .fa-heart::before { content: "♥"; }
+        .fa-bolt::before { content: "↯"; }
+        .fa-percent::before { content: "%"; }
+        .fa-tag::before { content: "◆"; }
+        .fa-gift::before { content: "▣"; }
+        .fa-shield-halved::before { content: "◆"; }
+        .fa-paw::before { content: "●"; }
+        .fa-flag::before { content: "⚑"; }
+        .fa-leaf::before { content: "♦"; }
+        .fa-hand-holding-heart::before { content: "♥"; }
+        .fa-store::before { content: "▤"; }
+        .fa-cat::before { content: "●"; }
+        .fa-gem::before { content: "◆"; }
+        .fa-mobile-screen-button::before { content: "▯"; }
+        .fa-hand-sparkles::before { content: "✦"; }
+        .fa-location-dot::before { content: "●"; }
+        .fa-hand-pointer::before { content: "↑"; }
+        .fa-bowl-food::before { content: "◡"; }
+        .fa-comments::before,
+        .fa-message::before { content: "●"; }
+        .fa-circle-question::before { content: "?"; }
+
+        a {
+            color: inherit;
+        }
+
+        a:focus-visible,
+        button:focus-visible,
+        summary:focus-visible {
+            outline: 3px solid var(--sun);
+            outline-offset: 3px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            margin: 0;
+            font-family: "Arial Rounded MT Bold", "Trebuchet MS", Arial, sans-serif;
+            line-height: 1.1;
+            letter-spacing: 0;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        button,
+        input,
+        select {
+            font: inherit;
+        }
+
+        .container {
+            width: min(1120px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 72px 0;
+        }
+
+        .section-heading {
+            max-width: 720px;
+            margin: 0 auto 36px;
+            text-align: center;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+            color: var(--mint);
+            font-size: 0.88rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .section-heading h2 {
+            font-size: 2.4rem;
+        }
+
+        .section-heading p {
+            margin-top: 12px;
+            color: var(--muted);
+            font-size: 1.05rem;
+        }
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.96);
+            border-bottom: 1px solid rgba(223, 231, 229, 0.9);
+            backdrop-filter: blur(14px);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 74px;
+            gap: 20px;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            font-weight: 800;
+        }
+
+        .brand img {
+            width: 46px;
+            height: 46px;
+            object-fit: contain;
+        }
+
+        .brand span {
+            font-family: "Arial Rounded MT Bold", "Trebuchet MS", Arial, sans-serif;
+            font-size: 1.25rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: var(--ink);
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+        .nav-link:hover {
+            color: var(--mint);
+        }
+
+        .menu-toggle {
+            display: none;
+            width: 44px;
+            height: 44px;
+            align-items: center;
+            justify-content: center;
+            color: var(--ink);
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            cursor: pointer;
+        }
+
         .btn {
-            display: inline-block; padding: 15px 35px; border-radius: 50px;
-            font-weight: 700; font-size: 1rem; text-decoration: none;
-            transition: 0.3s; border: none; cursor: pointer; box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            text-align: center; white-space: nowrap;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-height: 48px;
+            padding: 12px 18px;
+            border: 0;
+            border-radius: var(--radius);
+            font-weight: 900;
+            line-height: 1;
+            text-decoration: none;
+            cursor: pointer;
+            transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
         }
-        .btn-primary { background: var(--green-main); color: white; }
-        .btn-primary:hover { background: var(--green-dark); transform: translateY(-3px); }
-        .btn-secondary { background: var(--blue-main); color: white; }
-        .btn-secondary:hover { background: var(--blue-dark); transform: translateY(-3px); }
 
-        /* --- HEADER --- */
-        header {
-            background: rgba(255,255,255,0.98); padding: 10px 0; position: sticky; top: 0;
-            z-index: 1000; box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        .btn:hover {
+            transform: translateY(-2px);
         }
-        .nav-box { display: flex; justify-content: space-between; align-items: center; }
-        .logo img { height: 50px; }
-        .nav-menu { display: flex; gap: 25px; list-style: none; align-items: center; }
-        .nav-link { text-decoration: none; color: var(--text-main); font-weight: 600; transition: 0.3s; }
 
-        /* --- HERO --- */
+        .btn-primary {
+            color: var(--paper);
+            background: var(--mint);
+            box-shadow: 0 10px 24px rgba(31, 122, 104, 0.25);
+        }
+
+        .btn-primary:hover {
+            background: #176858;
+        }
+
+        .btn-secondary {
+            color: var(--paper);
+            background: var(--sky);
+        }
+
+        .btn-ghost {
+            color: var(--ink);
+            background: var(--paper);
+            border: 1px solid var(--line);
+        }
+
         .hero {
-            padding: 60px 0 100px; background: radial-gradient(circle at top right, var(--green-bg), white);
-            display: flex; align-items: center; min-height: 85vh;
+            position: relative;
+            display: flex;
+            min-height: 74svh;
+            align-items: center;
+            isolation: isolate;
+            overflow: hidden;
+            color: var(--paper);
+            background: #1f3339 url("hero.jpg") center / cover no-repeat;
         }
-        .hero-content { flex: 1; padding-right: 30px; }
-        .tag-trust {
-            display: inline-flex; align-items: center; gap: 8px; background: var(--blue-bg);
-            color: var(--blue-dark); padding: 6px 16px; border-radius: 20px; font-weight: bold;
-            font-size: 0.85rem; margin-bottom: 20px; border: 1px solid var(--blue-main);
-        }
-        .hero h1 { font-size: 3.2rem; margin-bottom: 20px; }
-        .hero h1 span { color: var(--green-main); }
-        .hero-img { flex: 1; display: flex; justify-content: center; }
-        .hero-img img {
-            width: 90%; border-radius: 40px; border: 8px solid white;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.1); transform: rotate(-2deg);
-            animation: float 6s ease-in-out infinite;
-        }
-        @keyframes float { 0%, 100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-20px) rotate(-2deg); } }
 
-        /* --- STATS --- */
-        .stats-bar {
-            background: white; margin-top: -50px; position: relative; z-index: 2; border-radius: 20px;
-            padding: 30px; box-shadow: var(--shadow-soft); display: flex; justify-content: space-around;
-            flex-wrap: wrap; gap: 20px;
+        .hero::before {
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            content: "";
+            background: linear-gradient(90deg, rgba(16, 39, 43, 0.84) 0%, rgba(16, 39, 43, 0.52) 45%, rgba(16, 39, 43, 0.2) 100%);
         }
-        .stat-number { font-size: 2rem; font-weight: 800; color: var(--green-main); display: block; }
 
-        /* --- FEATURES --- */
-        .features { padding: 80px 0; background: white; }
-        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .hero-content {
+            width: min(650px, 100%);
+            padding: 76px 0 82px;
+        }
+
+        .trust-line {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            margin-bottom: 18px;
+            font-weight: 900;
+        }
+
+        .trust-line i {
+            color: var(--sun);
+        }
+
+        .hero h1 {
+            max-width: 580px;
+            color: var(--paper);
+            font-size: 4.2rem;
+        }
+
+        .hero p {
+            max-width: 560px;
+            margin-top: 18px;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.18rem;
+            font-weight: 600;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+        .hero-points {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+        .hero-point {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 10px;
+            color: var(--paper);
+            background: rgba(255, 255, 255, 0.13);
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            border-radius: var(--radius);
+            font-weight: 800;
+        }
+
+        .promo-band {
+            background: var(--mint);
+            color: var(--paper);
+        }
+
+        .promo-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+            background: rgba(255, 255, 255, 0.18);
+        }
+
+        .promo-item {
+            padding: 22px 18px;
+            background: var(--mint);
+            text-align: center;
+        }
+
+        .promo-number {
+            display: block;
+            font-family: "Arial Rounded MT Bold", "Trebuchet MS", Arial, sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .promo-label {
+            display: block;
+            margin-top: 6px;
+            font-weight: 800;
+        }
+
+        .features-grid,
+        .steps-grid,
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .feature-card,
+        .step-card,
+        .review-card,
+        .product-card,
+        .order-panel {
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background: var(--paper);
+        }
+
         .feature-card {
-            padding: 30px; border-radius: var(--radius); background: var(--green-bg);
-            border-left: 5px solid var(--green-main);
+            padding: 26px;
         }
-        .feature-card i { font-size: 2.5rem; color: var(--green-main); margin-bottom: 15px; }
 
-        /* --- CATALOGO --- */
-        .catalog { padding: 80px 0; background: var(--blue-bg); }
+        .feature-icon,
+        .step-icon {
+            display: inline-flex;
+            width: 46px;
+            height: 46px;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 18px;
+            color: var(--paper);
+            background: var(--mint);
+            border-radius: var(--radius);
+            font-size: 1.25rem;
+        }
+
+        .feature-card:nth-child(2) .feature-icon {
+            background: var(--sky);
+        }
+
+        .feature-card:nth-child(3) .feature-icon {
+            background: var(--coral);
+        }
+
+        .feature-card h3,
+        .step-card h3,
+        .product-card h3 {
+            font-size: 1.35rem;
+        }
+
+        .feature-card p,
+        .step-card p,
+        .review-card p {
+            margin-top: 10px;
+            color: var(--muted);
+        }
+
+        .catalog {
+            background: var(--mist);
+        }
+
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
-            gap: 30px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
         }
+
         .product-card {
-            background: white; border-radius: var(--radius); overflow: hidden;
-            box-shadow: var(--shadow-soft); position: relative;
-            border: 1px solid rgba(0,0,0,0.03); display: flex; flex-direction: column;
-        }
-        .badge-offer {
-            position: absolute; top: 15px; left: 15px; background: #FFB74D; color: white;
-            padding: 5px 12px; border-radius: 10px; font-weight: bold; z-index: 2; font-size: 0.8rem;
-        }
-        
-        .p-img { width: 100%; height: 280px; background: #f9f9f9; overflow: hidden; }
-        .p-img img { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: 0.5s; }
-        
-        .p-info { padding: 20px; text-align: center; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
-        .p-price { font-size: 1.4rem; font-weight: 800; color: var(--green-main); margin: 10px 0; }
-        .p-price s { font-size: 1rem; color: #aaa; margin-right: 8px; }
-        
-        .btn-select {
-            width: 100%; padding: 10px; border: 2px solid var(--blue-main); background: transparent;
-            color: var(--blue-main); border-radius: 50px; font-weight: bold; cursor: pointer; transition: 0.3s;
-        }
-        .btn-select:hover, .btn-select.active { background: var(--blue-main); color: white; }
-
-        /* --- EXTRAS --- */
-        .install { padding: 80px 0; background: white; text-align: center; }
-        .steps-grid { display: flex; justify-content: center; gap: 20px; margin-top: 40px; flex-wrap: wrap; }
-        .step-box { flex: 1; min-width: 200px; background: #fff; padding: 20px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.03); }
-        .step-num {
-            width: 40px; height: 40px; background: var(--green-main); color: white;
-            border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            font-weight: bold; margin: 0 auto 15px;
-        }
-
-        .gift { padding: 80px 0; background: var(--green-bg); }
-        .gift-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
-        .gift-list li {
-            list-style: none; background: white; padding: 15px; margin-bottom: 10px;
-            border-radius: 15px; display: flex; align-items: center; gap: 15px;
-            font-weight: 600; font-size: 0.95rem;
-        }
-        .gift-img img { width: 100%; border-radius: 30px; border: 5px solid white; transform: rotate(2deg); }
-
-        .mission { padding: 80px 0; background: white; }
-        .mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
-        .mission-img img { width: 100%; border-radius: 30px; border: 4px solid var(--blue-bg); }
-
-        .reviews { padding: 80px 0; background: var(--blue-bg); }
-        .review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 30px; }
-        .review-card { background: white; padding: 25px; border-radius: 20px; }
-
-        /* --- FORMULARIO CARRITO --- */
-        .order-section { padding: 80px 0; background: linear-gradient(135deg, var(--green-main), var(--blue-main)); }
-        .order-card {
-            background: white; max-width: 600px; margin: 0 auto; padding: 40px;
-            border-radius: 30px; box-shadow: 0 20px 50px rgba(0,0,0,0.15); position: relative;
-        }
-        
-        .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; font-weight: 700; margin-bottom: 8px; color: var(--text-main); }
-        
-        .form-control {
-            width: 100%; height: 55px; padding: 0 15px;
-            border: 2px solid #ECEFF1; border-radius: 12px;
-            font-size: 1rem; font-family: 'Quicksand', sans-serif;
-            transition: 0.3s; background: white; color: var(--text-main);
-        }
-        .form-control:focus { border-color: var(--green-main); outline: none; background: #FAFAFA; }
-
-        .form-row { display: flex; gap: 15px; align-items: flex-end; }
-
-        .btn-add {
-            height: 55px; background: var(--blue-main); color: white;
-            border: none; border-radius: 12px; font-weight: 700;
-            cursor: pointer; padding: 0 30px; transition: 0.3s;
-            display: flex; align-items: center; justify-content: center;
-            gap: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); font-family: 'Quicksand', sans-serif;
-        }
-        .btn-add:hover { background: var(--blue-dark); transform: translateY(-2px); }
-
-        .btn-submit {
-            width: 100%; height: 55px; background: var(--green-main);
-            color: white; border: none; border-radius: 12px;
-            font-weight: 800; font-size: 1.1rem; cursor: pointer;
-            transition: 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-            margin-top: 10px; font-family: 'Quicksand', sans-serif;
-            display: flex; align-items: center; justify-content: center; gap: 10px;
-        }
-        .btn-submit:hover { background: var(--green-dark); transform: translateY(-3px); }
-
-        .cart-list {
-            background: #F9F9F9; padding: 15px; border-radius: 12px;
-            margin-bottom: 20px; border: 1px dashed #CFD8DC;
-        }
-        .cart-item {
-            display: flex; justify-content: space-between; padding: 8px 0;
-            border-bottom: 1px solid #eee; font-size: 0.95rem;
-        }
-        .cart-total {
-            font-size: 1.3rem; font-weight: 800; text-align: right;
-            color: var(--green-main); margin-top: 10px;
-        }
-        .delete-item { color: #ef5350; cursor: pointer; margin-left: 10px; }
-
-        footer { background: #37474F; color: white; padding: 60px 0 30px; text-align: center; }
-        .social-links a {
-            display: inline-flex; width: 45px; height: 45px; background: rgba(255,255,255,0.1);
-            border-radius: 50%; align-items: center; justify-content: center; color: white;
-            font-size: 1.2rem; margin: 0 8px;
-        }
-
-        /* BOTÓN WHATSAPP - FIXED Y SIN ANIMACIÓN */
-        .wa-float {
-            position: fixed; 
-            bottom: 20px; 
-            right: 20px; 
-            background: #25D366; 
-            color: white;
-            width: 60px; 
-            height: 60px; 
-            border-radius: 50%; 
+            position: relative;
             display: flex;
-            align-items: center; 
-            justify-content: center; 
-            font-size: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3); 
-            z-index: 9999;
-            /* Animation removed for stability */
+            min-width: 0;
+            overflow: hidden;
+            box-shadow: 0 12px 28px rgba(31, 61, 70, 0.08);
         }
 
-        @media (max-width: 768px) {
-            .container { padding: 0 25px; }
-            .nav-menu li:not(:last-child) { display: none; } 
-            .hero { flex-direction: column; text-align: center; padding-top: 40px; padding-bottom: 60px; }
-            .hero-content { padding-right: 0; margin-bottom: 40px; }
-            .hero h1 { font-size: 2.5rem; }
-            .hero-img img { width: 80%; margin: 0 auto; }
-            .gift-grid, .mission-grid { grid-template-columns: 1fr; display: flex; flex-direction: column; }
-            .gift-img, .mission-img { order: -1; margin-bottom: 20px; } 
-            .products-grid { grid-template-columns: 1fr; } 
-            .p-img { height: 260px; } 
-            .stats-bar { padding: 20px; gap: 15px; }
-            .stat-item { width: 45%; } 
-            .order-card { padding: 30px 20px; }
-            .form-row { flex-direction: column; align-items: stretch; }
-            .btn-add { width: 100%; margin-top: 10px; }
+        .product-media {
+            width: 45%;
+            min-height: 220px;
+            background: #edf7f4;
+        }
+
+        .product-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-info {
+            display: flex;
+            width: 55%;
+            min-width: 0;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 18px;
+            gap: 18px;
+        }
+
+        .badge {
+            display: inline-flex;
+            width: max-content;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 8px;
+            color: #593800;
+            background: #ffe0a3;
+            border-radius: var(--radius);
+            font-size: 0.78rem;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        .product-info p {
+            margin-top: 8px;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .price {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 8px;
+            margin-top: 12px;
+            color: var(--mint);
+            font-size: 1.45rem;
+            font-weight: 900;
+        }
+
+        .price s {
+            color: #5f737a;
+            font-size: 0.95rem;
+            font-weight: 700;
+        }
+
+        .select-product {
+            width: 100%;
+            color: var(--paper);
+            background: var(--sky);
+        }
+
+        .how {
+            background: var(--paper);
+        }
+
+        .step-card {
+            padding: 26px;
+        }
+
+        .step-index {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            margin-bottom: 14px;
+            color: var(--mint);
+            background: #e5f6f0;
+            border-radius: 50%;
+            font-weight: 900;
+        }
+
+        .story {
+            background: #fff7e4;
+        }
+
+        .premium-custom {
+            color: #3f2b1f;
+            background: #fffaf3;
+            border-top: 1px solid #eadbc7;
+            border-bottom: 1px solid #eadbc7;
+        }
+
+        .premium-intro {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            gap: 32px;
+            align-items: end;
+            margin-bottom: 30px;
+        }
+
+        .premium-heading {
+            max-width: 760px;
+        }
+
+        .premium-custom .eyebrow {
+            color: #8a551f;
+        }
+
+        .premium-heading h2 {
+            font-size: 2.55rem;
+        }
+
+        .premium-heading p {
+            margin-top: 14px;
+            color: #665548;
+            font-size: 1.08rem;
+        }
+
+        .premium-cta {
+            min-width: 250px;
+            color: #ffffff;
+            background: #15803d;
+            box-shadow: 0 10px 24px rgba(21, 128, 61, 0.24);
+        }
+
+        .premium-cta:hover {
+            background: #116a33;
+        }
+
+        .premium-banner {
+            overflow: hidden;
+            margin: 0;
+            background: #f5e5d1;
+            border: 1px solid #d9b680;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .premium-banner img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+        }
+
+        .premium-process {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin-top: 30px;
+            border-top: 1px solid #dac8b2;
+            border-bottom: 1px solid #dac8b2;
+        }
+
+        .premium-step {
+            display: grid;
+            grid-template-columns: 42px 1fr;
+            gap: 14px;
+            align-items: start;
+            padding: 24px;
+        }
+
+        .premium-step + .premium-step {
+            border-left: 1px solid #dac8b2;
+        }
+
+        .premium-step-index {
+            display: inline-flex;
+            width: 42px;
+            height: 42px;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            background: #8a551f;
+            border-radius: 50%;
+            font-weight: 900;
+        }
+
+        .premium-step h3 {
+            margin-bottom: 6px;
+            font-size: 1.05rem;
+        }
+
+        .premium-step p {
+            color: #665548;
+            font-size: 0.95rem;
+        }
+
+        .premium-mobile-cta {
+            display: none;
+        }
+
+        .order-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 42px;
+            align-items: center;
+        }
+
+        .story-copy,
+        .mission-copy {
+            width: min(760px, 100%);
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .story .check-list {
+            max-width: 590px;
+            margin: 22px auto 0;
+            text-align: left;
+        }
+
+        .story-copy h2,
+        .mission-copy h2,
+        .order-copy h2 {
+            font-size: 2.35rem;
+        }
+
+        .story-copy p,
+        .mission-copy p,
+        .order-copy p {
+            margin-top: 14px;
+            color: var(--muted);
+            font-size: 1.05rem;
+        }
+
+        .check-list {
+            display: grid;
+            gap: 12px;
+            margin: 22px 0 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .check-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 800;
+        }
+
+        .check-list i {
+            display: inline-flex;
+            width: 30px;
+            height: 30px;
+            flex: 0 0 30px;
+            align-items: center;
+            justify-content: center;
+            color: var(--paper);
+            background: var(--mint);
+            border-radius: 50%;
+        }
+
+        .mission {
+            background: var(--paper);
+        }
+
+        .mission-card {
+            display: grid;
+            max-width: 680px;
+            gap: 14px;
+            margin: 22px auto 0;
+            text-align: left;
+        }
+
+        .mission-note {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            padding: 16px;
+            background: var(--mist);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            font-weight: 800;
+        }
+
+        .mission-note i {
+            margin-top: 4px;
+            color: var(--coral);
+        }
+
+        .reviews,
+        .faq-section {
+            background: var(--mist);
+        }
+
+        .review-card {
+            padding: 24px;
+        }
+
+        .stars {
+            display: flex;
+            gap: 4px;
+            color: var(--sun);
+            font-size: 0.95rem;
+        }
+
+        .review-card strong {
+            display: block;
+            margin-top: 14px;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 36px;
+            align-items: start;
+        }
+
+        .faq-list {
+            display: grid;
+            gap: 12px;
+        }
+
+        .faq-heading {
+            margin-left: 0;
+            text-align: left;
+        }
+
+        .faq-list details {
+            padding: 18px;
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+        }
+
+        .faq-list summary {
+            cursor: pointer;
+            font-weight: 900;
+        }
+
+        .faq-list p {
+            margin-top: 10px;
+            color: var(--muted);
+        }
+
+        .contact-panel {
+            padding: 26px;
+            color: var(--paper);
+            background: var(--mint);
+            border-radius: var(--radius);
+        }
+
+        .contact-panel h2 {
+            color: var(--paper);
+            font-size: 2rem;
+        }
+
+        .contact-panel p {
+            margin: 12px 0 20px;
+        }
+
+        .contact-panel .eyebrow {
+            color: var(--paper);
+        }
+
+        .order-section {
+            background: var(--footer);
+            color: var(--paper);
+        }
+
+        .order-copy h2 {
+            color: var(--paper);
+        }
+
+        .order-copy p {
+            color: rgba(255, 255, 255, 0.82);
+        }
+
+        .order-copy .eyebrow {
+            color: var(--sun);
+        }
+
+        .order-copy .check-list i {
+            background: var(--sun);
+            color: #422900;
+        }
+
+        .order-panel {
+            padding: 26px;
+            color: var(--ink);
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label,
+        .field-label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--ink);
+            font-weight: 900;
+        }
+
+        .form-control {
+            width: 100%;
+            min-height: 50px;
+            padding: 0 14px;
+            color: var(--ink);
+            background: var(--paper);
+            border: 1px solid #cddbd8;
+            border-radius: var(--radius);
+            outline: 0;
+        }
+
+        textarea.form-control {
+            min-height: 92px;
+            padding-top: 12px;
+            resize: vertical;
+        }
+
+        .form-control:focus {
+            border-color: var(--mint);
+            box-shadow: 0 0 0 4px rgba(31, 122, 104, 0.14);
+        }
+
+        .order-row {
+            display: grid;
+            grid-template-columns: 1fr 120px auto;
+            gap: 12px;
+            align-items: end;
+        }
+
+        .cart {
+            min-height: 76px;
+            margin: 18px 0 12px;
+            padding: 14px;
+            background: #f7fbfa;
+            border: 1px dashed #b9cac5;
+            border-radius: var(--radius);
+        }
+
+        .cart-empty {
+            color: var(--muted);
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .cart-item {
+            display: grid;
+            grid-template-columns: 1fr auto auto;
+            gap: 12px;
+            align-items: center;
+            padding: 9px 0;
+            border-bottom: 1px solid #e8efed;
+        }
+
+        .cart-item:last-child {
+            border-bottom: 0;
+        }
+
+        .cart-remove {
+            width: 34px;
+            height: 34px;
+            color: #b33724;
+            background: #fff0ec;
+            border: 0;
+            border-radius: var(--radius);
+            cursor: pointer;
+        }
+
+        .cart-controls {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .cart-qty {
+            min-width: 28px;
+            text-align: center;
+            font-weight: 900;
+        }
+
+        .cart-adjust {
+            width: 32px;
+            height: 32px;
+            color: var(--ink);
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            cursor: pointer;
+        }
+
+        .form-status {
+            min-height: 24px;
+            margin-top: 10px;
+            color: #9a2e1f;
+            font-weight: 800;
+            text-align: center;
+        }
+
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 18px;
+            padding-top: 4px;
+            font-size: 1.25rem;
+            font-weight: 900;
+        }
+
+        .submit-order {
+            width: 100%;
+            background: #25d366;
+            color: #073d1d;
+        }
+
+        .form-help {
+            margin-top: 12px;
+            color: var(--muted);
+            font-size: 0.88rem;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .site-footer {
+            padding: 36px 0;
+            color: rgba(255, 255, 255, 0.82);
+            background: #18282d;
+        }
+
+        .footer-grid {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .footer-brand {
+            color: var(--paper);
+            font-family: "Arial Rounded MT Bold", "Trebuchet MS", Arial, sans-serif;
+            font-size: 1.4rem;
+            font-weight: 800;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-links a,
+        .wa-float {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        .social-links a {
+            width: 42px;
+            height: 42px;
+            color: var(--paper);
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: var(--radius);
+        }
+
+        .wa-float {
+            position: fixed;
+            right: 18px;
+            bottom: 18px;
+            z-index: 1001;
+            width: 58px;
+            height: 58px;
+            color: #073d1d;
+            background: #25d366;
+            border-radius: 50%;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.22);
+            font-size: 1.7rem;
+        }
+
+        @media (max-width: 980px) {
+            .hero h1 {
+                font-size: 3.2rem;
+            }
+
+            .promo-grid,
+            .features-grid,
+            .steps-grid,
+            .review-grid,
+            .products-grid,
+            .premium-process,
+            .faq-grid,
+            .order-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .premium-step:nth-child(3) {
+                grid-column: 1 / -1;
+                border-top: 1px solid #dac8b2;
+                border-left: 0;
+            }
+
+            .order-row {
+                grid-template-columns: 1fr 120px;
+            }
+
+            .order-row .btn {
+                grid-column: 1 / -1;
+            }
+        }
+
+        @media (max-width: 760px) {
+            .container {
+                width: min(100% - 28px, 1120px);
+            }
+
+            .section {
+                padding: 54px 0;
+            }
+
+            .nav {
+                min-height: 66px;
+            }
+
+            .brand img {
+                width: 40px;
+                height: 40px;
+            }
+
+            .menu-toggle {
+                display: inline-flex;
+            }
+
+            .nav-menu {
+                position: fixed;
+                inset: 66px 0 auto 0;
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                padding: 12px 14px 18px;
+                background: var(--paper);
+                border-bottom: 1px solid var(--line);
+                box-shadow: 0 18px 30px rgba(31, 61, 70, 0.16);
+            }
+
+            body.nav-open .nav-menu {
+                display: flex;
+            }
+
+            .nav-link {
+                display: block;
+                padding: 14px 0;
+            }
+
+            .nav-menu .btn {
+                margin-top: 8px;
+            }
+
+            .hero {
+                min-height: 68svh;
+                background-position: 58% center;
+            }
+
+            .hero::before {
+                background: linear-gradient(90deg, rgba(16, 39, 43, 0.86), rgba(16, 39, 43, 0.58));
+            }
+
+            .hero-content {
+                padding: 54px 0 60px;
+            }
+
+            .hero h1,
+            .section-heading h2,
+            .story-copy h2,
+            .mission-copy h2,
+            .premium-heading h2,
+            .order-copy h2 {
+                font-size: 2.25rem;
+            }
+
+            .premium-intro {
+                grid-template-columns: 1fr;
+            }
+
+            .premium-intro > .premium-cta {
+                width: 100%;
+            }
+
+            .premium-mobile-cta {
+                display: inline-flex;
+                width: 100%;
+                margin-top: 22px;
+            }
+
+            .hero p {
+                font-size: 1.05rem;
+            }
+
+            .promo-grid,
+            .features-grid,
+            .steps-grid,
+            .review-grid,
+            .products-grid,
+            .premium-process,
+            .faq-grid,
+            .order-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .premium-step + .premium-step,
+            .premium-step:nth-child(3) {
+                grid-column: auto;
+                border-top: 1px solid #dac8b2;
+                border-left: 0;
+            }
+
+            .product-card {
+                min-height: auto;
+            }
+
+            .product-media {
+                min-height: 190px;
+            }
+
+            .footer-grid {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .hero-actions,
+            .hero-points {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .product-card {
+                flex-direction: column;
+            }
+
+            .product-media,
+            .product-info {
+                width: 100%;
+            }
+
+            .product-media {
+                height: 280px;
+            }
+
+            .order-row {
+                grid-template-columns: 1fr;
+            }
+
+            .cart-item {
+                grid-template-columns: 1fr auto;
+            }
+
+            .cart-item > strong,
+            .cart-controls {
+                grid-column: 1 / -1;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                transition-duration: 0.01ms !important;
+            }
         }
     </style>
 </head>
 <body>
-
-    <!-- HEADER -->
-    <header>
-        <div class="container nav-box">
-            <a href="#" class="logo">
-                <img src="logo.png" alt="Peluditos 3D">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+        <nav class="container nav" aria-label="Navegación principal">
+            <a class="brand" href="#inicio" aria-label="Peluditos 3D, ir al inicio">
+                <img src="brand-symbol.png" alt="" width="46" height="46">
+                <span>Peluditos 3D</span>
             </a>
-            <ul class="nav-menu">
-                <li><a href="#inicio" class="nav-link">Inicio</a></li>
-                <li><a href="#catalogo" class="nav-link">Colección</a></li>
-                <li><a href="#mision" class="nav-link">Fundación</a></li>
-                <li><a href="#pedido" class="btn btn-primary">Pedir Ahora</a></li>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a class="nav-link" href="#catalogo">Colección</a></li>
+                <li><a class="nav-link" href="#personalizados">Personalizados</a></li>
+                <li><a class="nav-link" href="#mision">Fundación</a></li>
+                <li><a class="nav-link" href="#preguntas">Preguntas</a></li>
+                <li><a class="btn btn-primary" href="#pedido"><i class="fa-brands fa-whatsapp"></i> Pedir ahora</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
 
-    <!-- HERO -->
-    <section id="inicio" class="hero">
-        <div class="container">
-            <div class="hero-content" data-aos="fade-right">
-                <div class="tag-trust"><i class="fa-solid fa-check"></i> Compra segura</div>
-                <h1>Tu Mascota en tu <span>Celular</span></h1>
-                <p>Accesorios 3D adorables, 100% colombianos. Ecológicos (PLA), tiernos y con un propósito social.</p>
-                <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; md:justify-content: flex-start;">
-                    <a href="#catalogo" class="btn btn-primary">Ver modelos</a>
-                    <a href="#mision" class="btn btn-secondary">Ver causa</a>
+    <main id="contenido">
+        <section class="hero" id="inicio">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="trust-line"><i class="fa-solid fa-shield-halved"></i> Hechos en Colombia con PLA</div>
+                    <h1>Peluditos 3D para tu celular</h1>
+                    <p>Accesorios adorables inspirados en mascotas, listos para regalar y con una parte de cada compra destinada a la Fundación Animalista Girardot.</p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#catalogo"><i class="fa-solid fa-paw"></i> Ver modelos</a>
+                        <a class="btn btn-ghost" href="#pedido"><i class="fa-brands fa-whatsapp"></i> Cotizar pedido</a>
+                    </div>
+                    <div class="hero-points" aria-label="Beneficios principales">
+                        <span class="hero-point"><i class="fa-solid fa-tag"></i> Desde $24.900</span>
+                        <span class="hero-point"><i class="fa-solid fa-gift"></i> Cajita de regalo</span>
+                        <span class="hero-point"><i class="fa-solid fa-heart"></i> Compra con causa</span>
+                    </div>
                 </div>
             </div>
-            <div class="hero-img" data-aos="zoom-in">
-                <img src="hero.jpg" alt="Peludito 3D en celular">
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- STATS -->
-    <div class="container">
-        <div class="stats-bar" data-aos="fade-up">
-            <div class="stat-item">
-                <span class="stat-number">+1500</span>
-                <span class="stat-label">Vendidos</span>
+        <section class="promo-band" aria-label="Datos de Peluditos 3D">
+            <div class="container">
+                <div class="promo-grid">
+                    <div class="promo-item">
+                        <span class="promo-number">+1500</span>
+                        <span class="promo-label">vendidos</span>
+                    </div>
+                    <div class="promo-item">
+                        <span class="promo-number">100%</span>
+                        <span class="promo-label">colombiano</span>
+                    </div>
+                    <div class="promo-item">
+                        <span class="promo-number">+50</span>
+                        <span class="promo-label">ayudas</span>
+                    </div>
+                    <div class="promo-item">
+                        <span class="promo-number">5/5</span>
+                        <span class="promo-label">calidad</span>
+                    </div>
+                </div>
             </div>
-            <div class="stat-item">
-                <span class="stat-number">100%</span>
-                <span class="stat-label">Colombiano</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">+50</span>
-                <span class="stat-label">Ayudas</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">5/5</span>
-                <span class="stat-label">Calidad</span>
-            </div>
-        </div>
-    </div>
+        </section>
 
-    <!-- BENEFICIOS -->
-    <section class="features">
-        <div class="container">
-            <div class="text-center" style="margin-bottom: 40px;">
-                <h2>¿Por qué son tan especiales?</h2>
+        <section class="section features" aria-labelledby="beneficios-title">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow"><i class="fa-solid fa-star"></i> Accesorios con intención</span>
+                    <h2 id="beneficios-title">Pequeños, tiernos y listos para acompañarte</h2>
+                    <p>Cada pieza combina diseño, impresión 3D y un empaque bonito para convertir cualquier celular en un detalle con personalidad.</p>
+                </div>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <span class="feature-icon"><i class="fa-solid fa-flag"></i></span>
+                        <h3>Diseño local</h3>
+                        <p>Producto colombiano, creado con cuidado y pensado para amantes de los animales.</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="feature-icon"><i class="fa-solid fa-leaf"></i></span>
+                        <h3>Material PLA</h3>
+                        <p>Impresos en plástico vegetal, liviano y seguro para llevar en la funda del celular.</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="feature-icon"><i class="fa-solid fa-hand-holding-heart"></i></span>
+                        <h3>Ayuda real</h3>
+                        <p>Con tu pedido aportas a alimentos y medicinas para peluditos que lo necesitan.</p>
+                    </article>
+                </div>
             </div>
-            <div class="features-grid">
-                <div class="feature-card" data-aos="fade-up">
-                    <i class="fa-solid fa-flag"></i>
-                    <h3>100% Colombiano</h3>
-                    <p>Talento local apoyando la industria nacional.</p>
-                </div>
-                <div class="feature-card" data-aos="fade-up">
-                    <i class="fa-solid fa-leaf"></i>
-                    <h3>Hechos de maíz</h3>
-                    <p>Plástico vegetal (PLA) biodegradable y seguro.</p>
-                </div>
-                <div class="feature-card" data-aos="fade-up">
-                    <i class="fa-solid fa-heart"></i>
-                    <h3>Ayuda real</h3>
-                    <p>Con tu compra ayudas a un peludito de la fundación.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CATALOGO -->
-    <section id="catalogo" class="catalog">
-        <div class="container">
-            <h2 class="text-center" style="margin-bottom: 10px; font-size: 2.5rem;">Colección Disponible</h2>
-            <p class="text-center" style="margin-bottom: 50px;">¡Aprovecha la promoción!</p>
-            
-            <div class="products-grid">
-                <!-- Producto 1 -->
-                <div class="product-card">
-                    <div class="badge-offer">POPULAR</div>
-                    <div class="p-img"><img src="poodle.jpg" alt="Poodle"></div>
-                    <div class="p-info">
-                        <h3>Poodle</h3>
-                        <div class="p-price"><s>$30.000</s> $24.900</div>
-                        <button class="btn-select" onclick="selectProduct('Poodle')">Elegir</button>
-                    </div>
+        <section class="section catalog" id="catalogo" aria-labelledby="catalogo-title">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow"><i class="fa-solid fa-store"></i> Promoción activa</span>
+                    <h2 id="catalogo-title">Colección disponible</h2>
+                    <p>Elige tu modelo favorito y agrégalo al pedido. Todos están en promoción por tiempo limitado.</p>
                 </div>
-                <!-- Producto 2 -->
-                <div class="product-card">
-                    <div class="badge-offer">-17% OFF</div>
-                    <div class="p-img"><img src="pinscher.jpg" alt="Pinscher"></div>
-                    <div class="p-info">
-                        <h3>Pinscher</h3>
-                        <div class="p-price"><s>$30.000</s> $24.900</div>
-                        <button class="btn-select" onclick="selectProduct('Pinscher')">Elegir</button>
-                    </div>
-                </div>
-                
-                <!-- Producto 3 (CORREGIDO PARA CELULAR) -->
-                <div class="product-card">
-                    <div class="p-img"><img src="gato-nuevo.jpg" alt="Gato Criollo"></div>
-                    <div class="p-info">
-                        <h3>Gato Criollo</h3>
-                        <div class="p-price"><s>$30.000</s> $24.900</div>
-                        <button class="btn-select" onclick="selectProduct('Gato Criollo')">Elegir</button>
-                    </div>
-                </div>
-                
-                <!-- Producto 4 -->
-                <div class="product-card">
-                    <div class="badge-offer">NUEVO</div>
-                    <div class="p-img"><img src="shihtzu.jpg" alt="Shih Tzu"></div>
-                    <div class="p-info">
-                        <h3>Shih Tzu</h3>
-                        <div class="p-price"><s>$30.000</s> $24.900</div>
-                        <button class="btn-select" onclick="selectProduct('Shih Tzu')">Elegir</button>
-                    </div>
-                </div>
-                <!-- Producto 5 -->
-                <div class="product-card">
-                    <div class="badge-offer">EDICIÓN LTDA</div>
-                    <div class="p-img"><img src="perro-criollo.jpg" alt="Perro Criollo"></div>
-                    <div class="p-info">
-                        <h3>Perro Criollo</h3>
-                        <div class="p-price"><s>$30.000</s> $24.900</div>
-                        <button class="btn-select" onclick="selectProduct('Perro Criollo')">Elegir</button>
-                    </div>
-                </div>
-                <!-- Producto 6 -->
-                <div class="product-card">
-                    <div class="badge-offer">PREMIUM</div>
-                    <div class="p-img"><img src="gato-persa.jpg" alt="Gato Persa"></div>
-                    <div class="p-info">
-                        <h3>Gato Persa</h3>
-                        <div class="p-price"><s>$30.000</s> $24.900</div>
-                        <button class="btn-select" onclick="selectProduct('Gato Persa')">Elegir</button>
-                    </div>
+
+                <div class="products-grid">
+                    <article class="product-card">
+                        <div class="product-media">
+                            <img src="poodle.jpg" alt="Accesorio 3D de Poodle con empaque Peluditos" width="853" height="1280" loading="lazy" decoding="async">
+                        </div>
+                        <div class="product-info">
+                            <div>
+                                <span class="badge"><i class="fa-solid fa-star"></i> Popular</span>
+                                <h3>Poodle</h3>
+                                <p>Un clásico tierno para quienes aman los rizos y los detalles suaves.</p>
+                                <div class="price"><s>$30.000</s> $24.900</div>
+                            </div>
+                            <button class="btn select-product" type="button" data-product="Poodle"><i class="fa-solid fa-plus"></i> Elegir</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-media">
+                            <img src="pinscher.jpg" alt="Accesorio 3D de Pinscher con empaque Peluditos" width="853" height="1280" loading="lazy" decoding="async">
+                        </div>
+                        <div class="product-info">
+                            <div>
+                                <span class="badge"><i class="fa-solid fa-percent"></i> Oferta</span>
+                                <h3>Pinscher</h3>
+                                <p>Pequeño, expresivo y con mucha personalidad para tu celular.</p>
+                                <div class="price"><s>$30.000</s> $24.900</div>
+                            </div>
+                            <button class="btn select-product" type="button" data-product="Pinscher"><i class="fa-solid fa-plus"></i> Elegir</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-media">
+                            <img src="gato-nuevo.JPG" alt="Accesorio 3D de Gato Criollo con empaque Peluditos" width="853" height="1280" loading="lazy" decoding="async">
+                        </div>
+                        <div class="product-info">
+                            <div>
+                                <span class="badge"><i class="fa-solid fa-cat"></i> Favorito</span>
+                                <h3>Gato Criollo</h3>
+                                <p>Para quienes tienen un michi único, curioso y dueño de la casa.</p>
+                                <div class="price"><s>$30.000</s> $24.900</div>
+                            </div>
+                            <button class="btn select-product" type="button" data-product="Gato Criollo"><i class="fa-solid fa-plus"></i> Elegir</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-media">
+                            <img src="shihtzu.jpg" alt="Accesorio 3D de Shih Tzu con empaque Peluditos" width="853" height="1280" loading="lazy" decoding="async">
+                        </div>
+                        <div class="product-info">
+                            <div>
+                                <span class="badge"><i class="fa-solid fa-bolt"></i> Nuevo</span>
+                                <h3>Shih Tzu</h3>
+                                <p>Un modelo dulce para celulares con estilo alegre y juguetón.</p>
+                                <div class="price"><s>$30.000</s> $24.900</div>
+                            </div>
+                            <button class="btn select-product" type="button" data-product="Shih Tzu"><i class="fa-solid fa-plus"></i> Elegir</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-media">
+                            <img src="perro-criollo.jpg" alt="Accesorio 3D de Perro Criollo con empaque Peluditos" width="853" height="1280" loading="lazy" decoding="async">
+                        </div>
+                        <div class="product-info">
+                            <div>
+                                <span class="badge"><i class="fa-solid fa-heart"></i> Edición limitada</span>
+                                <h3>Perro Criollo</h3>
+                                <p>El homenaje perfecto a los compañeros más nobles y leales.</p>
+                                <div class="price"><s>$30.000</s> $24.900</div>
+                            </div>
+                            <button class="btn select-product" type="button" data-product="Perro Criollo"><i class="fa-solid fa-plus"></i> Elegir</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-media">
+                            <img src="gato-persa.jpg" alt="Accesorio 3D de Gato Persa con empaque Peluditos" width="853" height="1280" loading="lazy" decoding="async">
+                        </div>
+                        <div class="product-info">
+                            <div>
+                                <span class="badge"><i class="fa-solid fa-gem"></i> Premium</span>
+                                <h3>Gato Persa</h3>
+                                <p>Elegante, peludito y perfecto para un regalo con mucho encanto.</p>
+                                <div class="price"><s>$30.000</s> $24.900</div>
+                            </div>
+                            <button class="btn select-product" type="button" data-product="Gato Persa"><i class="fa-solid fa-plus"></i> Elegir</button>
+                        </div>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- INSTALACION -->
-    <section class="install">
-        <div class="container">
-            <h2>Instalación en 3 pasos</h2>
-            <div class="steps-grid">
-                <div class="step-box">
-                    <div class="step-num">1</div>
-                    <h4>Limpia</h4>
-                    <p>Limpia la superficie del celular.</p>
+        <section class="section premium-custom" id="personalizados" aria-labelledby="personalizados-title">
+            <div class="container">
+                <div class="premium-intro">
+                    <div class="premium-heading">
+                        <span class="eyebrow"><i class="fa-solid fa-gem"></i> Personalizados premium</span>
+                        <h2 id="personalizados-title">Tu peludito convertido en una pieza única</h2>
+                        <p>Creamos una figura inspirada en sus rasgos, colores y expresión. Osito es un ejemplo real del proceso: partimos de sus fotografías y desarrollamos un recuerdo hecho especialmente para su familia.</p>
+                    </div>
+                    <a class="btn premium-cta" href="https://wa.me/573052556248?text=Hola%20Peluditos%203D%2C%20quiero%20cotizar%20un%20personalizado%20premium%20inspirado%20en%20mi%20peludito.%20%C2%BFQu%C3%A9%20fotos%20necesitan%3F" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-whatsapp"></i> Cotizar mi peludito
+                    </a>
                 </div>
-                <div class="step-box">
-                    <div class="step-num">2</div>
-                    <h4>Pega</h4>
-                    <p>Retira el adhesivo y ubica.</p>
+
+                <figure class="premium-banner">
+                    <img src="osito-personalizado-premium.webp" alt="Comparación de las fotografías de Osito con su figura personalizada premium creada por Peluditos 3D" width="1600" height="900" loading="lazy" decoding="async">
+                </figure>
+
+                <div class="premium-process" aria-label="Proceso para crear un personalizado premium">
+                    <div class="premium-step">
+                        <span class="premium-step-index" aria-hidden="true">1</span>
+                        <div>
+                            <h3>Envíanos sus fotos</h3>
+                            <p>Comparte imágenes claras de frente, perfil y espalda para conocer cada detalle.</p>
+                        </div>
+                    </div>
+                    <div class="premium-step">
+                        <span class="premium-step-index" aria-hidden="true">2</span>
+                        <div>
+                            <h3>Recibe tu cotización</h3>
+                            <p>Revisamos el diseño, tamaño y nivel de detalle antes de confirmar el valor y el tiempo.</p>
+                        </div>
+                    </div>
+                    <div class="premium-step">
+                        <span class="premium-step-index" aria-hidden="true">3</span>
+                        <div>
+                            <h3>Aprobamos y creamos</h3>
+                            <p>Validamos contigo los rasgos principales y producimos una pieza cuidada, hecha con amor.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="step-box">
-                    <div class="step-num">3</div>
-                    <h4>Presiona</h4>
-                    <p>Presiona por 5 segundos y ¡listo!</p>
+
+                <a class="btn premium-cta premium-mobile-cta" href="https://wa.me/573052556248?text=Hola%20Peluditos%203D%2C%20quiero%20cotizar%20un%20personalizado%20premium%20inspirado%20en%20mi%20peludito.%20%C2%BFQu%C3%A9%20fotos%20necesitan%3F" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-whatsapp"></i> Cotizar mi peludito
+                </a>
+            </div>
+        </section>
+
+        <section class="section how" id="como-funciona" aria-labelledby="como-title">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow"><i class="fa-solid fa-mobile-screen-button"></i> Fácil de instalar</span>
+                    <h2 id="como-title">Pégalo en tres pasos</h2>
+                    <p>El accesorio queda firme sobre la funda del celular si preparas bien la superficie antes de ponerlo.</p>
+                </div>
+                <div class="steps-grid">
+                    <article class="step-card">
+                        <span class="step-index">1</span>
+                        <span class="step-icon"><i class="fa-solid fa-hand-sparkles"></i></span>
+                        <h3>Limpia</h3>
+                        <p>Retira polvo o grasa de la funda para mejorar la adherencia.</p>
+                    </article>
+                    <article class="step-card">
+                        <span class="step-index">2</span>
+                        <span class="step-icon"><i class="fa-solid fa-location-dot"></i></span>
+                        <h3>Ubica</h3>
+                        <p>Presenta el peludito en la posición que más te guste antes de pegarlo.</p>
+                    </article>
+                    <article class="step-card">
+                        <span class="step-index">3</span>
+                        <span class="step-icon"><i class="fa-solid fa-hand-pointer"></i></span>
+                        <h3>Presiona</h3>
+                        <p>Mantén presión por unos segundos y deja que el adhesivo se fije.</p>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- REGALO -->
-    <section class="gift">
-        <div class="container">
-            <div class="gift-grid">
-                <div data-aos="fade-right">
-                    <h2>El regalo perfecto 🎁</h2>
-                    <p>Sorprende a esa persona especial.</p>
-                    <ul class="gift-list">
-                        <li><i class="fa-solid fa-heart"></i> Para amantes de las mascotas.</li>
-                        <li><i class="fa-solid fa-cake-candles"></i> Cumpleaños y fechas especiales.</li>
-                        <li><i class="fa-solid fa-box"></i> Llega en cajita de regalo.</li>
+        <section class="section story" aria-labelledby="regalo-title">
+            <div class="container">
+                <div class="story-copy">
+                    <span class="eyebrow"><i class="fa-solid fa-gift"></i> Listo para sorprender</span>
+                    <h2 id="regalo-title">Un detalle bonito para amantes de las mascotas</h2>
+                    <p>Cada Peludito llega con presentación cuidada para cumpleaños, amor y amistad, aniversarios o simplemente para alegrarle el día a alguien.</p>
+                    <ul class="check-list">
+                        <li><i class="fa-solid fa-check"></i> Ideal para regalo personal o de pareja</li>
+                        <li><i class="fa-solid fa-check"></i> Diseños de perros y gatos populares</li>
+                        <li><i class="fa-solid fa-check"></i> Pedido rápido por WhatsApp</li>
                     </ul>
                 </div>
-                <div class="gift-img" data-aos="zoom-in">
-                    <img src="regalo.jpg" alt="Regalo">
-                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- MISION -->
-    <section id="mision" class="mission">
-        <div class="container">
-            <div class="mission-grid">
-                <div class="mission-img" data-aos="fade-right">
-                    <img src="info.jpg" alt="Fundacion">
-                </div>
-                <div class="mission-content" data-aos="fade-left">
-                    <h2 style="color: var(--green-main);">Tu compra ayuda 🐾</h2>
-                    <p>Somos aliados de la <strong>Fundación Animalista Girardot</strong>. Donamos parte de las ganancias para alimentos y medicinas.</p>
-                    <p style="background: #FFF3E0; padding: 15px; border-radius: 10px; color: #E65100; font-weight: bold;">
-                        <i class="fa-solid fa-bowl-food"></i> Hoy ayudas a llenar un platito.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TESTIMONIOS -->
-    <section class="reviews">
-        <div class="container">
-            <h2 class="text-center">Clientes felices</h2>
-            <div class="review-grid">
-                <div class="review-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p>"Es igualito a mi perro. Me encantó la calidad."</p>
-                    <strong>- Camila R.</strong>
-                </div>
-                <div class="review-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p>"Excelente regalo. El envío fue muy rápido."</p>
-                    <strong>- Julián M.</strong>
-                </div>
-                <div class="review-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p>"Me gusta saber que ayudo a la fundación."</p>
-                    <strong>- Ana S.</strong>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FORMULARIO CARRITO DE COMPRAS -->
-    <section id="pedido" class="order-section">
-        <div class="container">
-            <div class="order-card">
-                <div class="text-center mb-4">
-                    <h2 style="color: var(--green-main);">¡Arma tu pedido! 👇</h2>
-                    <p>Selecciona y agrega los peluditos que desees.</p>
-                </div>
-                
-                <form onsubmit="return false;">
-                    <div class="form-group">
-                        <label>Nombre completo:</label>
-                        <input type="text" id="name" class="form-control" placeholder="Ej: Laura Gómez" required>
-                    </div>
-
-                    <label style="font-weight:bold; margin-bottom:8px; display:block; color:var(--text-main);">Selecciona tus peluditos:</label>
-                    
-                    <div class="form-group">
-                        <select id="product-select" class="form-control">
-                            <option value="" disabled selected>Elige un modelo...</option>
-                            <option value="Poodle">Poodle</option>
-                            <option value="Pinscher">Pinscher</option>
-                            <option value="Gato Criollo">Gato Criollo</option>
-                            <option value="Shih Tzu">Shih Tzu</option>
-                            <option value="Perro Criollo">Perro Criollo</option>
-                            <option value="Gato Persa">Gato Persa</option>
-                        </select>
-                    </div>
-
-                    <div class="form-row">
-                        <div style="flex: 1;">
-                            <label style="font-weight:bold; font-size:0.9rem;">Cantidad:</label>
-                            <input type="number" id="product-qty" class="form-control" value="1" min="1">
+        <section class="section mission" id="mision" aria-labelledby="mision-title">
+            <div class="container">
+                <div class="mission-copy">
+                    <span class="eyebrow"><i class="fa-solid fa-hand-holding-heart"></i> Compra con causa</span>
+                    <h2 id="mision-title">Tu pedido ayuda a la Fundación Animalista Girardot</h2>
+                    <p>Parte de las ganancias se destina a apoyar alimentos y medicinas para animales rescatados. No solo compras un accesorio: ayudas a llenar un plato.</p>
+                    <div class="mission-card">
+                        <div class="mission-note">
+                            <i class="fa-solid fa-bowl-food"></i>
+                            <span>Con cada compra estás aportando a una ayuda concreta para peluditos que esperan una segunda oportunidad.</span>
                         </div>
-                        <div style="flex: 1;">
-                            <button class="btn-add" onclick="addToOrder()">
-                                Agregar <i class="fa-solid fa-plus-circle"></i>
-                            </button>
+                        <a class="btn btn-secondary" href="#pedido"><i class="fa-solid fa-heart"></i> Quiero apoyar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reviews" aria-labelledby="reviews-title">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow"><i class="fa-solid fa-comments"></i> Clientes felices</span>
+                    <h2 id="reviews-title">Lo que más les gusta</h2>
+                </div>
+                <div class="review-grid">
+                    <article class="review-card">
+                        <div class="stars" role="img" aria-label="5 de 5 estrellas">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                         </div>
-                    </div>
-
-                    <div class="cart-list" id="cart-display" style="margin-top:20px;">
-                        <p style="text-align:center; color:#aaa; font-size:0.9rem;">Tu carrito está vacío</p>
-                    </div>
-
-                    <div class="cart-total" id="cart-total">Total: $0</div>
-
-                    <div class="form-group" style="margin-top: 20px;">
-                        <label>Ciudad:</label>
-                        <input type="text" id="city" class="form-control" placeholder="Ej: Bogotá" required>
-                    </div>
-
-                    <button class="btn-submit" onclick="sendToWhatsapp()">
-                        <i class="fa-brands fa-whatsapp"></i> Enviar pedido por WhatsApp
-                    </button>
-                </form>
+                        <p>"Es igualito a mi perro. Me encantó la calidad y la cajita."</p>
+                        <strong>Camila R.</strong>
+                    </article>
+                    <article class="review-card">
+                        <div class="stars" role="img" aria-label="5 de 5 estrellas">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p>"Lo compré para regalo y llegó súper lindo. El pedido fue fácil."</p>
+                        <strong>Julián M.</strong>
+                    </article>
+                    <article class="review-card">
+                        <div class="stars" role="img" aria-label="5 de 5 estrellas">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p>"Me gustó saber que además de comprar algo bonito estoy ayudando."</p>
+                        <strong>Ana S.</strong>
+                    </article>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer>
-        <div class="container">
-            <h2 style="color: white; margin-bottom: 10px;">Peluditos 3D</h2>
-            <p>Amor, Tecnología y Solidaridad.</p>
-            <div class="social-links">
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+        <section class="section faq-section" id="preguntas" aria-labelledby="preguntas-title">
+            <div class="container faq-grid">
+                <div>
+                    <div class="section-heading faq-heading">
+                        <span class="eyebrow"><i class="fa-solid fa-circle-question"></i> Antes de pedir</span>
+                        <h2 id="preguntas-title">Preguntas frecuentes</h2>
+                    </div>
+                    <div class="faq-list">
+                        <details>
+                            <summary>¿Cómo hago mi pedido?</summary>
+                            <p>Elige los modelos, ajusta las cantidades y completa tu nombre y ciudad. Revisas el resumen y continúas la conversación por WhatsApp.</p>
+                        </details>
+                        <details>
+                            <summary>¿Cómo cotizo un personalizado premium?</summary>
+                            <p>Abre la sección Personalizados, pulsa “Cotizar mi peludito” y envíanos por WhatsApp fotografías claras de frente, perfil y espalda. Revisamos el nivel de detalle antes de confirmar precio y tiempo de elaboración.</p>
+                        </details>
+                        <details>
+                            <summary>¿El pago se realiza en esta página?</summary>
+                            <p>No. Esta página no solicita ni almacena datos de tarjetas. Los datos de pago y entrega se confirman directamente por WhatsApp.</p>
+                        </details>
+                        <details>
+                            <summary>¿Qué modelos están disponibles?</summary>
+                            <p>La colección publicada incluye Poodle, Pinscher, Gato Criollo, Shih Tzu, Perro Criollo y Gato Persa. La disponibilidad final se confirma al enviar el pedido.</p>
+                        </details>
+                        <details>
+                            <summary>¿Cómo se coordina la entrega?</summary>
+                            <p>Indica tu ciudad en el formulario. Peluditos 3D confirma por WhatsApp los datos necesarios para la entrega antes de cualquier pago.</p>
+                        </details>
+                    </div>
+                </div>
+                <aside class="contact-panel" id="contacto" aria-labelledby="contacto-title">
+                    <span class="eyebrow"><i class="fa-solid fa-message"></i> Contacto directo</span>
+                    <h2 id="contacto-title">¿Tienes una pregunta especial?</h2>
+                    <p>Escríbenos por WhatsApp o revisa las novedades reales de Peluditos 3D en Instagram.</p>
+                    <a class="btn btn-primary" href="https://wa.me/573052556248" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Hablar por WhatsApp</a>
+                </aside>
             </div>
-            <p style="font-size: 0.8rem; margin-top: 30px; opacity: 0.7;">&copy; 2023 Peluditos 3D. Colombia.</p>
+        </section>
+
+        <section class="section order-section" id="pedido" aria-labelledby="pedido-title">
+            <div class="container">
+                <div class="order-grid">
+                    <div class="order-copy">
+                        <span class="eyebrow"><i class="fa-brands fa-whatsapp"></i> Pedido directo</span>
+                        <h2 id="pedido-title">Arma tu pedido y envíalo por WhatsApp</h2>
+                        <p>Selecciona modelos, cantidades y ciudad. Te abrimos WhatsApp con el mensaje listo para confirmar disponibilidad y datos de pago.</p>
+                        <ul class="check-list">
+                            <li><i class="fa-solid fa-check"></i> Total calculado automáticamente</li>
+                            <li><i class="fa-solid fa-check"></i> Puedes combinar varios modelos</li>
+                            <li><i class="fa-solid fa-check"></i> Atención directa para coordinar entrega</li>
+                        </ul>
+                    </div>
+
+                    <form class="order-panel" id="order-form">
+                        <div class="form-group">
+                            <label for="name">Nombre completo</label>
+                            <input class="form-control" id="name" name="name" type="text" placeholder="Ej: Laura Gómez" autocomplete="name" minlength="2" maxlength="80" required>
+                        </div>
+
+                        <div class="order-row">
+                            <div>
+                                <label class="field-label" for="product-select">Modelo</label>
+                                <select class="form-control" id="product-select" name="product">
+                                    <option value="" selected>Elige un modelo</option>
+                                    <option value="Poodle">Poodle</option>
+                                    <option value="Pinscher">Pinscher</option>
+                                    <option value="Gato Criollo">Gato Criollo</option>
+                                    <option value="Shih Tzu">Shih Tzu</option>
+                                    <option value="Perro Criollo">Perro Criollo</option>
+                                    <option value="Gato Persa">Gato Persa</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="field-label" for="product-qty">Cantidad</label>
+                                <input class="form-control" id="product-qty" name="quantity" type="number" value="1" min="1" max="20" inputmode="numeric">
+                            </div>
+                            <button class="btn btn-secondary" id="add-product" type="button"><i class="fa-solid fa-plus"></i> Agregar</button>
+                        </div>
+
+                        <div class="cart" id="cart-display" aria-live="polite">
+                            <p class="cart-empty">Tu carrito está vacío</p>
+                        </div>
+
+                        <div class="cart-total">
+                            <span>Total</span>
+                            <span id="cart-total">$0</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="city">Ciudad</label>
+                            <input class="form-control" id="city" name="city" type="text" placeholder="Ej: Bogotá" autocomplete="address-level2" minlength="2" maxlength="80" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">Dirección <span class="form-help">(opcional)</span></label>
+                            <input class="form-control" id="address" name="address" type="text" autocomplete="street-address" maxlength="160">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="notes">Observaciones <span class="form-help">(opcional)</span></label>
+                            <textarea class="form-control" id="notes" name="notes" maxlength="300" placeholder="Detalles útiles para confirmar tu pedido"></textarea>
+                        </div>
+
+                        <button class="btn submit-order" type="submit"><i class="fa-brands fa-whatsapp"></i> Enviar pedido</button>
+                        <p class="form-help">No pagas en la web. El pedido se confirma por WhatsApp.</p>
+                        <p class="form-status" id="form-status" aria-live="assertive"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <div class="footer-brand">Peluditos 3D</div>
+                <p>Amor, tecnología y solidaridad. Colombia.</p>
+                <p>&copy; 2026 Peluditos 3D.</p>
+            </div>
+            <div class="social-links" aria-label="Redes y contacto">
+                <a href="https://www.instagram.com/peluditos3d/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Peluditos 3D"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/573052556248" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp de Peluditos 3D"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
         </div>
     </footer>
 
-    <a href="https://wa.me/573052556248" class="wa-float" target="_blank">
+    <a class="wa-float" href="https://wa.me/573052556248" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 800, once: true });
+        const WHATSAPP_NUMBER = "573052556248";
+        const UNIT_PRICE = 24900;
+        const STORAGE_KEY = "peluditos3d-cart-v1";
+        const PRODUCTS = new Set(["Poodle", "Pinscher", "Gato Criollo", "Shih Tzu", "Perro Criollo", "Gato Persa"]);
+        const formatter = new Intl.NumberFormat("es-CO", {
+            style: "currency",
+            currency: "COP",
+            maximumFractionDigits: 0
+        });
 
-        // LÓGICA DEL CARRITO
-        let cart = [];
-        const unitPrice = 24900;
+        const cart = loadCart();
+        document.querySelectorAll("i.fa-solid, i.fa-brands").forEach((icon) => icon.setAttribute("aria-hidden", "true"));
+        const navToggle = document.querySelector(".menu-toggle");
+        const navIcon = navToggle.querySelector("i");
+        const navLinks = document.querySelectorAll(".nav-menu a");
+        const productSelect = document.getElementById("product-select");
+        const qtyInput = document.getElementById("product-qty");
+        const cartDisplay = document.getElementById("cart-display");
+        const cartTotal = document.getElementById("cart-total");
+        const addButton = document.getElementById("add-product");
+        const orderForm = document.getElementById("order-form");
+        const formStatus = document.getElementById("form-status");
 
-        function selectProduct(name) {
-            document.getElementById('product-select').value = name;
-            document.getElementById('pedido').scrollIntoView({ behavior: 'smooth' });
+        renderCart();
+
+        navToggle.addEventListener("click", () => {
+            const isOpen = document.body.classList.toggle("nav-open");
+            navToggle.setAttribute("aria-expanded", String(isOpen));
+            navToggle.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
+            navIcon.className = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
+        });
+
+        navLinks.forEach((link) => {
+            link.addEventListener("click", (event) => {
+                const targetId = link.getAttribute("href");
+                document.body.classList.remove("nav-open");
+                navToggle.setAttribute("aria-expanded", "false");
+                navToggle.setAttribute("aria-label", "Abrir menú");
+                navIcon.className = "fa-solid fa-bars";
+
+                if (targetId?.startsWith("#")) {
+                    const target = document.querySelector(targetId);
+                    if (!target) return;
+
+                    event.preventDefault();
+                    window.history.pushState(null, "", targetId);
+                    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+                    window.requestAnimationFrame(() => {
+                        target.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+                    });
+                }
+            });
+        });
+
+        document.querySelectorAll(".select-product").forEach((button) => {
+            button.addEventListener("click", () => {
+                productSelect.value = button.dataset.product;
+                qtyInput.value = "1";
+                const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+                document.getElementById("pedido").scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+                setTimeout(() => qtyInput.focus(), 450);
+            });
+        });
+
+        addButton.addEventListener("click", addToOrder);
+        orderForm.addEventListener("submit", sendToWhatsapp);
+        cartDisplay.addEventListener("click", handleCartAction);
+
+        function loadCart() {
+            try {
+                const stored = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+                if (!Array.isArray(stored)) return [];
+
+                return stored
+                    .filter((item) => item && PRODUCTS.has(item.name) && Number.isInteger(item.qty))
+                    .map((item) => ({ name: item.name, qty: Math.min(Math.max(item.qty, 1), 20) }));
+            } catch {
+                return [];
+            }
+        }
+
+        function saveCart() {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(cart));
+        }
+
+        function setStatus(message) {
+            formStatus.textContent = message;
+        }
+
+        function getQuantity() {
+            const parsed = Number.parseInt(qtyInput.value, 10);
+            if (Number.isNaN(parsed) || parsed < 1) return 1;
+            if (parsed > 20) return 20;
+            return parsed;
         }
 
         function addToOrder() {
-            const product = document.getElementById('product-select').value;
-            const qty = parseInt(document.getElementById('product-qty').value);
+            const product = productSelect.value;
+            const qty = getQuantity();
 
             if (!product) {
-                alert("Por favor selecciona un modelo.");
+                productSelect.focus();
+                alert("Elige un modelo antes de agregarlo al pedido.");
                 return;
             }
 
-            cart.push({ name: product, qty: qty });
+            const existing = cart.find((item) => item.name === product);
+            if (existing) {
+                existing.qty = Math.min(existing.qty + qty, 20);
+            } else {
+                cart.push({ name: product, qty });
+            }
+
+            productSelect.value = "";
+            qtyInput.value = "1";
+            setStatus("");
             renderCart();
-            
-            document.getElementById('product-select').value = "";
-            document.getElementById('product-qty').value = "1";
-        }
-
-        function renderCart() {
-            const display = document.getElementById('cart-display');
-            const totalDisplay = document.getElementById('cart-total');
-            
-            if (cart.length === 0) {
-                display.innerHTML = '<p style="text-align:center; color:#aaa; font-size:0.9rem;">Tu carrito está vacío</p>';
-                totalDisplay.innerHTML = "Total: $0";
-                return;
-            }
-
-            let html = '';
-            let total = 0;
-
-            cart.forEach((item, index) => {
-                const itemTotal = item.qty * unitPrice;
-                total += itemTotal;
-                html += `
-                    <div class="cart-item">
-                        <span><strong>${item.qty}x</strong> ${item.name}</span>
-                        <span>$${itemTotal.toLocaleString()} <i class="fa-solid fa-trash delete-item" onclick="removeItem(${index})"></i></span>
-                    </div>
-                `;
-            });
-
-            display.innerHTML = html;
-            totalDisplay.innerHTML = "Total: $" + total.toLocaleString();
         }
 
         function removeItem(index) {
@@ -651,31 +1873,134 @@
             renderCart();
         }
 
-        function sendToWhatsapp() {
-            const name = document.getElementById('name').value;
-            const city = document.getElementById('city').value;
+        function changeQuantity(index, amount) {
+            const item = cart[index];
+            if (!item) return;
 
-            if (!name || !city) {
-                alert("Por favor escribe tu nombre y ciudad.");
-                return;
-            }
-            
+            item.qty = Math.min(Math.max(item.qty + amount, 1), 20);
+            renderCart();
+        }
+
+        function handleCartAction(event) {
+            const button = event.target.closest("button[data-action]");
+            if (!button) return;
+
+            const index = Number.parseInt(button.dataset.index, 10);
+            if (!Number.isInteger(index) || !cart[index]) return;
+
+            if (button.dataset.action === "remove") removeItem(index);
+            if (button.dataset.action === "decrease") changeQuantity(index, -1);
+            if (button.dataset.action === "increase") changeQuantity(index, 1);
+        }
+
+        function renderCart() {
+            cartDisplay.replaceChildren();
+
             if (cart.length === 0) {
-                alert("Agrega al menos un producto al pedido (+).");
+                const empty = document.createElement("p");
+                empty.className = "cart-empty";
+                empty.textContent = "Tu carrito está vacío";
+                cartDisplay.append(empty);
+                cartTotal.textContent = formatter.format(0);
+                saveCart();
                 return;
             }
 
-            let itemsList = "";
-            let grandTotal = 0;
+            const total = cart.reduce((sum, item) => sum + item.qty * UNIT_PRICE, 0);
+            cart.forEach((item, index) => {
+                const row = document.createElement("div");
+                row.className = "cart-item";
 
-            cart.forEach(item => {
-                itemsList += `%0A- ${item.qty}x ${item.name}`;
-                grandTotal += (item.qty * unitPrice);
+                const name = document.createElement("span");
+                name.textContent = item.name;
+
+                const subtotal = document.createElement("strong");
+                subtotal.textContent = formatter.format(item.qty * UNIT_PRICE);
+
+                const controls = document.createElement("div");
+                controls.className = "cart-controls";
+
+                const decrease = createCartButton("decrease", index, `Restar una unidad de ${item.name}`, "fa-minus");
+                const quantity = document.createElement("span");
+                quantity.className = "cart-qty";
+                quantity.textContent = String(item.qty);
+                const increase = createCartButton("increase", index, `Agregar una unidad de ${item.name}`, "fa-plus");
+                const remove = createCartButton("remove", index, `Quitar ${item.name} del carrito`, "fa-trash", "cart-remove");
+
+                controls.append(decrease, quantity, increase, remove);
+                row.append(name, subtotal, controls);
+                cartDisplay.append(row);
             });
 
-            const message = `Hola Peluditos 3D! 🐾%0A%0AQuiero confirmar mi pedido:%0A👤 *Nombre:* ${name}%0A📍 *Ciudad:* ${city}%0A%0A🛒 *PRODUCTOS:*${itemsList}%0A%0A💰 *TOTAL A PAGAR:* $${grandTotal.toLocaleString()}%0A%0A¿Me regalan los datos de pago?`;
-            
-            window.open(`https://wa.me/573052556248?text=${message}`, '_blank');
+            cartTotal.textContent = formatter.format(total);
+            saveCart();
+        }
+
+        function createCartButton(action, index, label, iconName, extraClass = "cart-adjust") {
+            const button = document.createElement("button");
+            button.className = extraClass;
+            button.type = "button";
+            button.dataset.action = action;
+            button.dataset.index = String(index);
+            button.setAttribute("aria-label", label);
+
+            const icon = document.createElement("i");
+            icon.className = `fa-solid ${iconName}`;
+            icon.setAttribute("aria-hidden", "true");
+            button.append(icon);
+            return button;
+        }
+
+        function sendToWhatsapp(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value.trim();
+            const city = document.getElementById("city").value.trim();
+            const address = document.getElementById("address").value.trim();
+            const notes = document.getElementById("notes").value.trim();
+
+            if (!orderForm.checkValidity()) {
+                setStatus("Revisa los campos obligatorios antes de continuar.");
+                orderForm.reportValidity();
+                return;
+            }
+
+            if (cart.length === 0) {
+                setStatus("Agrega al menos un Peludito al carrito.");
+                productSelect.focus();
+                return;
+            }
+
+            const total = cart.reduce((sum, item) => sum + item.qty * UNIT_PRICE, 0);
+            const items = cart.map((item) => `- ${item.qty}x ${item.name} | ${formatter.format(UNIT_PRICE)} c/u | ${formatter.format(item.qty * UNIT_PRICE)}`).join("\n");
+            const message = [
+                "Hola Peluditos 3D!",
+                "",
+                "Quiero confirmar mi pedido:",
+                `Nombre: ${name}`,
+                `Ciudad: ${city}`,
+                address ? `Dirección: ${address}` : "",
+                "",
+                "Productos:",
+                items,
+                "",
+                `Total: ${formatter.format(total)}`,
+                notes ? `Observaciones: ${notes}` : "",
+                "",
+                "¿Me regalan los datos de pago y entrega?"
+            ].filter((line, index, lines) => line !== "" || lines[index - 1] !== "").join("\n");
+
+            const summary = `Revisa tu pedido antes de abrir WhatsApp:\n\n${items}\n\nTotal: ${formatter.format(total)}\nCiudad: ${city}`;
+            if (!window.confirm(summary)) {
+                setStatus("Puedes seguir ajustando el pedido antes de enviarlo.");
+                return;
+            }
+
+            setStatus("");
+            const whatsappWindow = window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
+            if (!whatsappWindow) {
+                setStatus("El navegador bloqueó la nueva pestaña. Permite ventanas emergentes e inténtalo de nuevo.");
+            }
         }
     </script>
 </body>

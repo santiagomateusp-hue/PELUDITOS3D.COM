@@ -68,13 +68,15 @@ await page.waitForTimeout(100);
 await page.screenshot({ path: path.join(outputDir, "desktop-1366x768.png"), fullPage: false });
 await page.locator(".story").screenshot({ path: path.join(outputDir, "story-sin-imagen.png") });
 await page.locator("#mision").screenshot({ path: path.join(outputDir, "mision-sin-imagen.png") });
-await page.locator("#personalizados").screenshot({ path: path.join(outputDir, "personalizados-premium.png") });
 check(await page.locator(".story img").count() === 0, "La sección de regalo aún contiene una imagen");
 check(await page.locator("#mision img").count() === 0, "La sección de misión aún contiene una imagen");
 check(await page.locator('#personalizados img[src="osito-personalizado-premium.webp"]').count() === 1, "El banner premium de Osito no está presente");
 const premiumLinks = page.locator('#personalizados a[href*="wa.me/573052556248"]');
 check(await premiumLinks.count() === 2, "La sección premium debe ofrecer cotización por WhatsApp en escritorio y móvil");
 check((await premiumLinks.first().getAttribute("href")).includes("personalizado%20premium"), "El enlace premium no lleva un mensaje de cotización preparado");
+check(await page.locator("#personalizados").isHidden(), "La sección de personalizados premium debe estar oculta");
+check(await page.locator('.nav-menu a[href="#personalizados"]').isHidden(), "El acceso premium del menú debe estar oculto");
+check(await page.getByText("¿Cómo cotizo un personalizado premium?").isHidden(), "La pregunta frecuente premium debe estar oculta");
 
 const viewports = [
     { width: 320, height: 568 },
@@ -111,15 +113,7 @@ await page.evaluate(() => window.scrollTo(0, 0));
 await page.waitForTimeout(100);
 await page.screenshot({ path: path.join(outputDir, "mobile-390x844.png"), fullPage: false });
 await page.getByRole("button", { name: "Abrir menú" }).click();
-await page.getByRole("link", { name: "Personalizados", exact: true }).click();
-await page.waitForTimeout(1800);
-const premiumAnchorLayout = await page.evaluate(() => ({
-    headerBottom: document.querySelector(".site-header")?.getBoundingClientRect().bottom || 0,
-    headingTop: document.querySelector("#personalizados-title")?.getBoundingClientRect().top || 0
-}));
-check(premiumAnchorLayout.headingTop >= premiumAnchorLayout.headerBottom, "El título premium queda oculto bajo la navegación móvil");
-check(premiumAnchorLayout.headingTop < 260, "La navegación móvil no llegó a la sección premium");
-await page.screenshot({ path: path.join(outputDir, "personalizados-mobile.png"), fullPage: false });
+check(await page.getByRole("link", { name: "Personalizados", exact: true }).isHidden(), "El menú móvil muestra Personalizados Premium");
 
 await page.goto(`${baseUrl}/404.html`, { waitUntil: "networkidle" });
 check((await page.locator("h1").innerText()).includes("página no está aquí"), "La página 404 personalizada no cargó");
@@ -127,7 +121,9 @@ check((await page.locator("h1").innerText()).includes("página no está aquí"),
 await page.goto(baseUrl, { waitUntil: "networkidle" });
 await page.locator("footer").scrollIntoViewIfNeeded();
 await page.waitForTimeout(300);
-const brokenImages = await page.locator("img").evaluateAll((images) => images.filter((image) => !image.complete || image.naturalWidth === 0).map((image) => image.getAttribute("src")));
+const brokenImages = await page.locator("img").evaluateAll((images) => images
+    .filter((image) => !image.closest("[hidden]") && (!image.complete || image.naturalWidth === 0))
+    .map((image) => image.getAttribute("src")));
 check(brokenImages.length === 0, `Imágenes rotas: ${brokenImages.join(", ")}`);
 
 await browser.close();

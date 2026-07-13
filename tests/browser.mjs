@@ -31,6 +31,10 @@ await page.goto(baseUrl, { waitUntil: "networkidle" });
 check(await page.title() === "Peluditos 3D | Accesorios para celular con causa", "Título incorrecto");
 check(await page.locator("h1").count() === 1, "Debe existir un solo h1");
 check(await page.locator('link[rel="canonical"]').getAttribute("href") === "https://peluditos3d.shop/", "Canonical incorrecto");
+check(await page.evaluate(() => {
+    const sections = [...document.querySelectorAll("main > section")];
+    return sections.indexOf(document.querySelector("#como-funciona")) < sections.indexOf(document.querySelector("#catalogo"));
+}), "La guía de instalación no aparece antes del catálogo");
 
 await page.locator("#product-select").selectOption("Poodle");
 await page.locator("#product-qty").fill("2");

@@ -37,6 +37,7 @@ if (!index.includes("localStorage")) fail("El carrito no implementa persistencia
 if (!index.includes("window.confirm")) fail("Falta confirmación antes de WhatsApp");
 if (!index.includes('id="personalizados"')) fail("Falta la sección de personalizados premium");
 if (!index.includes("quiero%20cotizar%20un%20personalizado%20premium")) fail("Falta el mensaje de cotización premium para WhatsApp");
+if (index.indexOf('id="como-funciona"') > index.indexOf('id="catalogo"')) fail("La guía de instalación debe aparecer antes del catálogo");
 
 for (const [name, content] of [["index.html", index], ["404.html", page404]]) {
     if (/shopify|myshopify|23\.227\.38\.65/i.test(content)) fail(`${name} conserva una referencia de Shopify`);

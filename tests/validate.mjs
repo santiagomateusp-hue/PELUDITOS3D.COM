@@ -59,6 +59,9 @@ if (!index.includes('class="footer-brand"') || !index.includes('alt="Peluditos 3
 if (!index.includes('class="hero-brand-logo" src="brand-logo.png"')) fail("El hero debe mostrar el logotipo oficial horizontal");
 if (!index.includes("Accesorios adorables para tu celular, inspirados en mascotas y perfectos para regalar. 🐾")) fail("El hero no contiene el nuevo mensaje principal");
 if (!index.includes("Además, con cada compra ayudas a apoyar a la Fundación Animalista Girardot.")) fail("El hero no contiene el mensaje de apoyo a la fundación");
+if (!index.includes("Hechos en Colombia a base de caña y maíz")) fail("El hero no contiene el mensaje actualizado de materiales");
+if (index.includes("Hechos en Colombia con PLA")) fail("El hero conserva el mensaje anterior de PLA");
+if (index.includes("para tu celular</span>")) fail("El hero conserva el texto que debía eliminarse");
 
 for (const [name, content] of [["index.html", index], ["404.html", page404]]) {
     if (/shopify|myshopify|23\.227\.38\.65/i.test(content)) fail(`${name} conserva una referencia de Shopify`);

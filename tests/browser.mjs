@@ -34,7 +34,7 @@ check(await page.locator("header .brand-logo").count() === 1, "El encabezado no 
 check(await page.locator("footer .footer-brand img").count() === 1, "El pie de página no muestra el logotipo oficial");
 check(await page.locator("header .brand-logo").evaluate((image) => image.naturalWidth > image.naturalHeight), "El logotipo horizontal no cargó con la proporción correcta");
 check(await page.locator(".hero h1 .hero-brand-logo").count() === 1, "El hero no muestra el logotipo horizontal");
-check((await page.locator(".hero h1").innerText()).includes("para tu celular"), "El hero no conserva la categoría del producto");
+check(!(await page.locator(".hero h1").innerText()).includes("para tu celular"), "El hero conserva el texto que debía eliminarse");
 check((await page.locator(".hero-description").innerText()).includes("perfectos para regalar"), "El hero no muestra el nuevo mensaje");
 check(await page.locator('link[rel="canonical"]').getAttribute("href") === "https://peluditos3d.shop/", "Canonical incorrecto");
 check(await page.evaluate(() => {

@@ -56,6 +56,9 @@ if (!index.includes('"Pinscher": 19900')) fail("El Pinscher no tiene el precio p
 if (index.includes("UNIT_PRICE")) fail("El carrito aún usa un precio único para todos los modelos");
 if (!index.includes('class="brand-logo" src="brand-logo.png"')) fail("El encabezado debe usar el logotipo oficial horizontal");
 if (!index.includes('class="footer-brand"') || !index.includes('alt="Peluditos 3D"')) fail("El pie de página debe mostrar el logotipo oficial");
+if (!index.includes('class="hero-brand-logo" src="brand-logo.png"')) fail("El hero debe mostrar el logotipo oficial horizontal");
+if (!index.includes("Accesorios adorables para tu celular, inspirados en mascotas y perfectos para regalar. 🐾")) fail("El hero no contiene el nuevo mensaje principal");
+if (!index.includes("Además, con cada compra ayudas a apoyar a la Fundación Animalista Girardot.")) fail("El hero no contiene el mensaje de apoyo a la fundación");
 
 for (const [name, content] of [["index.html", index], ["404.html", page404]]) {
     if (/shopify|myshopify|23\.227\.38\.65/i.test(content)) fail(`${name} conserva una referencia de Shopify`);

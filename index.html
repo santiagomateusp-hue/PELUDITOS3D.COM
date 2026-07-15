@@ -509,6 +509,20 @@
             box-shadow: 0 12px 28px rgba(31, 61, 70, 0.08);
         }
 
+        .product-card-offer {
+            border: 2px solid var(--sun);
+            box-shadow: 0 14px 32px rgba(232, 109, 85, 0.16);
+        }
+
+        .product-card-offer .badge {
+            color: #5d3000;
+            background: #ffd166;
+        }
+
+        .product-card-offer .price {
+            color: #c24d36;
+        }
+
         .product-media {
             width: 45%;
             min-height: 220px;
@@ -1297,7 +1311,7 @@
             </button>
             <ul class="nav-menu" id="nav-menu">
                 <li><a class="nav-link" href="#catalogo">Colección</a></li>
-                <li><a class="nav-link" href="#personalizados">Personalizados</a></li>
+                <li hidden><a class="nav-link" href="#personalizados">Personalizados</a></li>
                 <li><a class="nav-link" href="#mision">Fundación</a></li>
                 <li><a class="nav-link" href="#preguntas">Preguntas</a></li>
                 <li><a class="btn btn-primary" href="#pedido"><i class="fa-brands fa-whatsapp"></i> Pedir ahora</a></li>
@@ -1317,7 +1331,7 @@
                         <a class="btn btn-ghost" href="#pedido"><i class="fa-brands fa-whatsapp"></i> Cotizar pedido</a>
                     </div>
                     <div class="hero-points" aria-label="Beneficios principales">
-                        <span class="hero-point"><i class="fa-solid fa-tag"></i> Desde $24.900</span>
+                        <span class="hero-point"><i class="fa-solid fa-tag"></i> Desde $19.900</span>
                         <span class="hero-point"><i class="fa-solid fa-gift"></i> Cajita de regalo</span>
                         <span class="hero-point"><i class="fa-solid fa-heart"></i> Compra con causa</span>
                     </div>
@@ -1410,13 +1424,28 @@
                 <div class="section-heading">
                     <span class="eyebrow"><i class="fa-solid fa-store"></i> Promoción activa</span>
                     <h2 id="catalogo-title">Colección disponible</h2>
-                    <p>Elige tu modelo favorito y agrégalo al pedido. Todos están en promoción por tiempo limitado.</p>
+                    <p>Elige entre 10 modelos y agrégalo al pedido. El Pinscher tiene precio especial de $19.900 por tiempo limitado.</p>
                 </div>
 
                 <div class="products-grid">
+                    <article class="product-card product-card-offer">
+                        <div class="product-media">
+                            <img src="catalogo-pinscher.webp" alt="Accesorio 3D Pinscher instalado en un celular junto a la mascota que lo inspiró" width="800" height="1200" loading="lazy" decoding="async">
+                        </div>
+                        <div class="product-info">
+                            <div>
+                                <span class="badge"><i class="fa-solid fa-percent"></i> Precio especial</span>
+                                <h3>Pinscher</h3>
+                                <p>Pequeño, expresivo y ahora con el precio más bajo de la colección.</p>
+                                <div class="price"><s>$30.000</s> $19.900</div>
+                            </div>
+                            <button class="btn select-product" type="button" data-product="Pinscher"><i class="fa-solid fa-plus"></i> Elegir</button>
+                        </div>
+                    </article>
+
                     <article class="product-card">
                         <div class="product-media">
-                            <img src="poodle.jpg" alt="Accesorio 3D de Poodle con empaque Peluditos" width="853" height="1280" loading="lazy" decoding="async">
+                            <img src="catalogo-poodle.webp" alt="Accesorio 3D de Poodle mostrado de frente y colocado en un celular" width="800" height="1200" loading="lazy" decoding="async">
                         </div>
                         <div class="product-info">
                             <div>
@@ -1431,22 +1460,37 @@
 
                     <article class="product-card">
                         <div class="product-media">
-                            <img src="pinscher.jpg" alt="Accesorio 3D de Pinscher con empaque Peluditos" width="853" height="1280" loading="lazy" decoding="async">
+                            <img src="catalogo-shih-tzu.webp" alt="Accesorio 3D de Shih Tzu instalado en un celular junto a una foto de la raza" width="800" height="1200" loading="lazy" decoding="async">
                         </div>
                         <div class="product-info">
                             <div>
-                                <span class="badge"><i class="fa-solid fa-percent"></i> Oferta</span>
-                                <h3>Pinscher</h3>
-                                <p>Pequeño, expresivo y con mucha personalidad para tu celular.</p>
+                                <span class="badge"><i class="fa-solid fa-bolt"></i> Favorito</span>
+                                <h3>Shih Tzu</h3>
+                                <p>Un modelo dulce para celulares con estilo alegre y juguetón.</p>
                                 <div class="price"><s>$30.000</s> $24.900</div>
                             </div>
-                            <button class="btn select-product" type="button" data-product="Pinscher"><i class="fa-solid fa-plus"></i> Elegir</button>
+                            <button class="btn select-product" type="button" data-product="Shih Tzu"><i class="fa-solid fa-plus"></i> Elegir</button>
                         </div>
                     </article>
 
                     <article class="product-card">
                         <div class="product-media">
-                            <img src="gato-nuevo.JPG" alt="Accesorio 3D de Gato Criollo con empaque Peluditos" width="853" height="1280" loading="lazy" decoding="async">
+                            <img src="catalogo-perro-criollo.webp" alt="Accesorio 3D de Perro Criollo mostrado de frente y colocado en un celular" width="800" height="1200" loading="lazy" decoding="async">
+                        </div>
+                        <div class="product-info">
+                            <div>
+                                <span class="badge"><i class="fa-solid fa-heart"></i> Edición especial</span>
+                                <h3>Perro Criollo</h3>
+                                <p>El homenaje perfecto a los compañeros más nobles y leales.</p>
+                                <div class="price"><s>$30.000</s> $24.900</div>
+                            </div>
+                            <button class="btn select-product" type="button" data-product="Perro Criollo"><i class="fa-solid fa-plus"></i> Elegir</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-media">
+                            <img src="catalogo-gato-criollo.webp" alt="Accesorio 3D de Gato Criollo mostrado de frente y colocado en un celular" width="800" height="1200" loading="lazy" decoding="async">
                         </div>
                         <div class="product-info">
                             <div>
@@ -1461,37 +1505,7 @@
 
                     <article class="product-card">
                         <div class="product-media">
-                            <img src="shihtzu.jpg" alt="Accesorio 3D de Shih Tzu con empaque Peluditos" width="853" height="1280" loading="lazy" decoding="async">
-                        </div>
-                        <div class="product-info">
-                            <div>
-                                <span class="badge"><i class="fa-solid fa-bolt"></i> Nuevo</span>
-                                <h3>Shih Tzu</h3>
-                                <p>Un modelo dulce para celulares con estilo alegre y juguetón.</p>
-                                <div class="price"><s>$30.000</s> $24.900</div>
-                            </div>
-                            <button class="btn select-product" type="button" data-product="Shih Tzu"><i class="fa-solid fa-plus"></i> Elegir</button>
-                        </div>
-                    </article>
-
-                    <article class="product-card">
-                        <div class="product-media">
-                            <img src="perro-criollo.jpg" alt="Accesorio 3D de Perro Criollo con empaque Peluditos" width="853" height="1280" loading="lazy" decoding="async">
-                        </div>
-                        <div class="product-info">
-                            <div>
-                                <span class="badge"><i class="fa-solid fa-heart"></i> Edición limitada</span>
-                                <h3>Perro Criollo</h3>
-                                <p>El homenaje perfecto a los compañeros más nobles y leales.</p>
-                                <div class="price"><s>$30.000</s> $24.900</div>
-                            </div>
-                            <button class="btn select-product" type="button" data-product="Perro Criollo"><i class="fa-solid fa-plus"></i> Elegir</button>
-                        </div>
-                    </article>
-
-                    <article class="product-card">
-                        <div class="product-media">
-                            <img src="gato-persa.jpg" alt="Accesorio 3D de Gato Persa con empaque Peluditos" width="853" height="1280" loading="lazy" decoding="async">
+                            <img src="catalogo-gato-persa.webp" alt="Accesorio 3D de Gato Persa mostrado de frente y colocado en un celular" width="800" height="1200" loading="lazy" decoding="async">
                         </div>
                         <div class="product-info">
                             <div>
@@ -1503,11 +1517,71 @@
                             <button class="btn select-product" type="button" data-product="Gato Persa"><i class="fa-solid fa-plus"></i> Elegir</button>
                         </div>
                     </article>
+
+                    <article class="product-card">
+                        <div class="product-media">
+                            <img src="catalogo-gato-negro.webp" alt="Accesorio 3D de Gato Negro con ojos amarillos" width="800" height="1200" loading="lazy" decoding="async">
+                        </div>
+                        <div class="product-info">
+                            <div>
+                                <span class="badge"><i class="fa-solid fa-bolt"></i> Nuevo</span>
+                                <h3>Gato Negro</h3>
+                                <p>Un michi de mirada brillante para darle contraste y carácter a tu celular.</p>
+                                <div class="price"><s>$30.000</s> $24.900</div>
+                            </div>
+                            <button class="btn select-product" type="button" data-product="Gato Negro"><i class="fa-solid fa-plus"></i> Elegir</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-media">
+                            <img src="catalogo-bulldog-frances.webp" alt="Accesorio 3D blanco y negro de Bulldog Francés" width="800" height="1200" loading="lazy" decoding="async">
+                        </div>
+                        <div class="product-info">
+                            <div>
+                                <span class="badge"><i class="fa-solid fa-bolt"></i> Nuevo</span>
+                                <h3>Bulldog Francés</h3>
+                                <p>Orejas grandes, expresión tierna y toda la personalidad de esta raza.</p>
+                                <div class="price"><s>$30.000</s> $24.900</div>
+                            </div>
+                            <button class="btn select-product" type="button" data-product="Bulldog Francés"><i class="fa-solid fa-plus"></i> Elegir</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-media">
+                            <img src="catalogo-salchicha.webp" alt="Accesorio 3D color dorado de perro Salchicha" width="800" height="1200" loading="lazy" decoding="async">
+                        </div>
+                        <div class="product-info">
+                            <div>
+                                <span class="badge"><i class="fa-solid fa-bolt"></i> Nuevo</span>
+                                <h3>Salchicha</h3>
+                                <p>El compañero alargado y encantador que siempre roba sonrisas.</p>
+                                <div class="price"><s>$30.000</s> $24.900</div>
+                            </div>
+                            <button class="btn select-product" type="button" data-product="Salchicha"><i class="fa-solid fa-plus"></i> Elegir</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-media">
+                            <img src="catalogo-schnauzer.webp" alt="Accesorio 3D gris y blanco de Schnauzer" width="800" height="1200" loading="lazy" decoding="async">
+                        </div>
+                        <div class="product-info">
+                            <div>
+                                <span class="badge"><i class="fa-solid fa-bolt"></i> Nuevo</span>
+                                <h3>Schnauzer</h3>
+                                <p>Su barba característica y mirada dulce en un diseño lleno de detalle.</p>
+                                <div class="price"><s>$30.000</s> $24.900</div>
+                            </div>
+                            <button class="btn select-product" type="button" data-product="Schnauzer"><i class="fa-solid fa-plus"></i> Elegir</button>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section class="section premium-custom" id="personalizados" aria-labelledby="personalizados-title">
+        <section class="section premium-custom" id="personalizados" aria-labelledby="personalizados-title" hidden>
             <div class="container">
                 <div class="premium-intro">
                     <div class="premium-heading">
@@ -1630,7 +1704,7 @@
                             <summary>¿Cómo hago mi pedido?</summary>
                             <p>Elige los modelos, ajusta las cantidades y completa tu nombre y ciudad. Revisas el resumen y continúas la conversación por WhatsApp.</p>
                         </details>
-                        <details>
+                        <details hidden>
                             <summary>¿Cómo cotizo un personalizado premium?</summary>
                             <p>Abre la sección Personalizados, pulsa “Cotizar mi peludito” y envíanos por WhatsApp fotografías claras de frente, perfil y espalda. Revisamos el nivel de detalle antes de confirmar precio y tiempo de elaboración.</p>
                         </details>
@@ -1640,7 +1714,7 @@
                         </details>
                         <details>
                             <summary>¿Qué modelos están disponibles?</summary>
-                            <p>La colección publicada incluye Poodle, Pinscher, Gato Criollo, Shih Tzu, Perro Criollo y Gato Persa. La disponibilidad final se confirma al enviar el pedido.</p>
+                            <p>La colección incluye Pinscher, Poodle, Shih Tzu, Perro Criollo, Gato Criollo, Gato Persa, Gato Negro, Bulldog Francés, Salchicha y Schnauzer. La disponibilidad final se confirma al enviar el pedido.</p>
                         </details>
                         <details>
                             <summary>¿Cómo se coordina la entrega?</summary>
@@ -1682,12 +1756,16 @@
                                 <label class="field-label" for="product-select">Modelo</label>
                                 <select class="form-control" id="product-select" name="product">
                                     <option value="" selected>Elige un modelo</option>
-                                    <option value="Poodle">Poodle</option>
-                                    <option value="Pinscher">Pinscher</option>
-                                    <option value="Gato Criollo">Gato Criollo</option>
-                                    <option value="Shih Tzu">Shih Tzu</option>
-                                    <option value="Perro Criollo">Perro Criollo</option>
-                                    <option value="Gato Persa">Gato Persa</option>
+                                    <option value="Pinscher">Pinscher — $19.900</option>
+                                    <option value="Poodle">Poodle — $24.900</option>
+                                    <option value="Shih Tzu">Shih Tzu — $24.900</option>
+                                    <option value="Perro Criollo">Perro Criollo — $24.900</option>
+                                    <option value="Gato Criollo">Gato Criollo — $24.900</option>
+                                    <option value="Gato Persa">Gato Persa — $24.900</option>
+                                    <option value="Gato Negro">Gato Negro — $24.900</option>
+                                    <option value="Bulldog Francés">Bulldog Francés — $24.900</option>
+                                    <option value="Salchicha">Salchicha — $24.900</option>
+                                    <option value="Schnauzer">Schnauzer — $24.900</option>
                                 </select>
                             </div>
                             <div>
@@ -1750,9 +1828,20 @@
 
     <script>
         const WHATSAPP_NUMBER = "573052556248";
-        const UNIT_PRICE = 24900;
         const STORAGE_KEY = "peluditos3d-cart-v1";
-        const PRODUCTS = new Set(["Poodle", "Pinscher", "Gato Criollo", "Shih Tzu", "Perro Criollo", "Gato Persa"]);
+        const PRODUCT_PRICES = Object.freeze({
+            "Pinscher": 19900,
+            "Poodle": 24900,
+            "Shih Tzu": 24900,
+            "Perro Criollo": 24900,
+            "Gato Criollo": 24900,
+            "Gato Persa": 24900,
+            "Gato Negro": 24900,
+            "Bulldog Francés": 24900,
+            "Salchicha": 24900,
+            "Schnauzer": 24900
+        });
+        const PRODUCTS = new Set(Object.keys(PRODUCT_PRICES));
         const formatter = new Intl.NumberFormat("es-CO", {
             style: "currency",
             currency: "COP",
@@ -1906,7 +1995,7 @@
                 return;
             }
 
-            const total = cart.reduce((sum, item) => sum + item.qty * UNIT_PRICE, 0);
+            const total = cart.reduce((sum, item) => sum + item.qty * PRODUCT_PRICES[item.name], 0);
             cart.forEach((item, index) => {
                 const row = document.createElement("div");
                 row.className = "cart-item";
@@ -1915,7 +2004,7 @@
                 name.textContent = item.name;
 
                 const subtotal = document.createElement("strong");
-                subtotal.textContent = formatter.format(item.qty * UNIT_PRICE);
+                subtotal.textContent = formatter.format(item.qty * PRODUCT_PRICES[item.name]);
 
                 const controls = document.createElement("div");
                 controls.className = "cart-controls";
@@ -1971,8 +2060,11 @@
                 return;
             }
 
-            const total = cart.reduce((sum, item) => sum + item.qty * UNIT_PRICE, 0);
-            const items = cart.map((item) => `- ${item.qty}x ${item.name} | ${formatter.format(UNIT_PRICE)} c/u | ${formatter.format(item.qty * UNIT_PRICE)}`).join("\n");
+            const total = cart.reduce((sum, item) => sum + item.qty * PRODUCT_PRICES[item.name], 0);
+            const items = cart.map((item) => {
+                const unitPrice = PRODUCT_PRICES[item.name];
+                return `- ${item.qty}x ${item.name} | ${formatter.format(unitPrice)} c/u | ${formatter.format(item.qty * unitPrice)}`;
+            }).join("\n");
             const message = [
                 "Hola Peluditos 3D!",
                 "",

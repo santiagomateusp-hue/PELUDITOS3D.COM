@@ -14,6 +14,16 @@ const requiredFiles = [
     "favicon-32.png",
     "apple-touch-icon.png",
     "osito-personalizado-premium.webp",
+    "catalogo-gato-negro.webp",
+    "catalogo-bulldog-frances.webp",
+    "catalogo-salchicha.webp",
+    "catalogo-schnauzer.webp",
+    "catalogo-poodle.webp",
+    "catalogo-shih-tzu.webp",
+    "catalogo-perro-criollo.webp",
+    "catalogo-gato-persa.webp",
+    "catalogo-gato-criollo.webp",
+    "catalogo-pinscher.webp",
     "hero.jpg"
 ];
 
@@ -37,7 +47,12 @@ if (!index.includes("localStorage")) fail("El carrito no implementa persistencia
 if (!index.includes("window.confirm")) fail("Falta confirmación antes de WhatsApp");
 if (!index.includes('id="personalizados"')) fail("Falta la sección de personalizados premium");
 if (!index.includes("quiero%20cotizar%20un%20personalizado%20premium")) fail("Falta el mensaje de cotización premium para WhatsApp");
+if (!index.includes('id="personalizados" aria-labelledby="personalizados-title" hidden')) fail("La sección premium debe permanecer oculta");
+if (!index.includes('<li hidden><a class="nav-link" href="#personalizados">')) fail("El acceso premium del menú debe permanecer oculto");
 if (index.indexOf('id="como-funciona"') > index.indexOf('id="catalogo"')) fail("La guía de instalación debe aparecer antes del catálogo");
+if ((index.match(/class="product-card(?:\s|"|>)/g) || []).length !== 10) fail("El catálogo debe contener 10 productos");
+if (!index.includes('"Pinscher": 19900')) fail("El Pinscher no tiene el precio promocional esperado");
+if (index.includes("UNIT_PRICE")) fail("El carrito aún usa un precio único para todos los modelos");
 
 for (const [name, content] of [["index.html", index], ["404.html", page404]]) {
     if (/shopify|myshopify|23\.227\.38\.65/i.test(content)) fail(`${name} conserva una referencia de Shopify`);

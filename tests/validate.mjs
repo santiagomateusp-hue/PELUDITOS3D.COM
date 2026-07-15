@@ -10,6 +10,7 @@ const requiredFiles = [
     "robots.txt",
     "sitemap.xml",
     "brand-symbol.png",
+    "brand-logo.png",
     "favicon.ico",
     "favicon-32.png",
     "apple-touch-icon.png",
@@ -53,6 +54,8 @@ if (index.indexOf('id="como-funciona"') > index.indexOf('id="catalogo"')) fail("
 if ((index.match(/class="product-card(?:\s|"|>)/g) || []).length !== 10) fail("El catálogo debe contener 10 productos");
 if (!index.includes('"Pinscher": 19900')) fail("El Pinscher no tiene el precio promocional esperado");
 if (index.includes("UNIT_PRICE")) fail("El carrito aún usa un precio único para todos los modelos");
+if (!index.includes('class="brand-logo" src="brand-logo.png"')) fail("El encabezado debe usar el logotipo oficial horizontal");
+if (!index.includes('class="footer-brand"') || !index.includes('alt="Peluditos 3D"')) fail("El pie de página debe mostrar el logotipo oficial");
 
 for (const [name, content] of [["index.html", index], ["404.html", page404]]) {
     if (/shopify|myshopify|23\.227\.38\.65/i.test(content)) fail(`${name} conserva una referencia de Shopify`);

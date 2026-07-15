@@ -30,6 +30,9 @@ await page.goto(baseUrl, { waitUntil: "networkidle" });
 
 check(await page.title() === "Peluditos 3D | Accesorios para celular con causa", "Título incorrecto");
 check(await page.locator("h1").count() === 1, "Debe existir un solo h1");
+check(await page.locator("header .brand-logo").count() === 1, "El encabezado no muestra el logotipo oficial");
+check(await page.locator("footer .footer-brand img").count() === 1, "El pie de página no muestra el logotipo oficial");
+check(await page.locator("header .brand-logo").evaluate((image) => image.naturalWidth > image.naturalHeight), "El logotipo horizontal no cargó con la proporción correcta");
 check(await page.locator('link[rel="canonical"]').getAttribute("href") === "https://peluditos3d.shop/", "Canonical incorrecto");
 check(await page.evaluate(() => {
     const sections = [...document.querySelectorAll("main > section")];
